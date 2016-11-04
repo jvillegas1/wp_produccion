@@ -1,0 +1,68 @@
+/* Scroll Bar Master Styling Starts Here */
+/* comments can freely be removed from this file */
+
+/* do not modify .scrollgeneric class, required for proper operation */
+.scrollgeneric {
+line-height: 1px; font-size: 1px;
+position: absolute; top: 0; left: 0;
+}
+
+.vscrollerbase, .vscrollerbar {
+width: 15px;
+}
+
+.hscrollerbase {
+height: 15px;
+}
+
+.vscrollerbar, .hscrollerbar {
+/*padding information of these elements are only used for
+padding of the scroll-bar with respect to the scroll base,
+the padding will automatically be turned off by the script*/
+padding: 5px;
+/* z-index for scrollbars no longer has to be given as of version
+1.7.5 for correct operation, but it is still recommended, as this
+decides the z-index for content.*/
+z-index: 2;
+}
+.vscrollerbarbeg {
+/*top image holder for vertical scroll bar*/
+                                                   
+background: url(http://wp.telesurtv.net/arte/especial-vscroller.png) 0px -10px;
+width: 15px;
+/* height is auto set by the script to fit the scrollbar */
+}
+
+.vscrollerbarend {
+/*bottom image holder for vertical scroll bar*/
+background: url(http://wp.telesurtv.net/arte/especial-vscroller.png);
+width: 15px; height: 10px;
+}
+
+
+/* Following are OPTIONAL */
+
+.vscrollerbase {
+background-color: #D1DDCB;
+background-image: url(images/scrollbaseback.png);
+}
+
+
+
+.vscrollerbasebeg {
+width: 15px;
+background: url(images/scrollbases.png) -7px -8px no-repeat;
+/* height is auto set to fill the base */
+}
+
+.vscrollerbaseend {
+height: 7px; width: 15px;
+background: url(images/scrollbases.png) -7px 0px no-repeat;
+}
+
+.scrollerjogbox {
+width: 15px; height: 15px;
+top: auto; left: auto; bottom: 0px; right: 0px;
+background: white url(images/scrolljog.png) 50% 50%;
+}
+/* Scroll Bar Master Styling Ends Here */

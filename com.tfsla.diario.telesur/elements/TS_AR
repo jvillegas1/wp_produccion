@@ -1,0 +1,29 @@
+<%@ include file="TS_Common_Libraries.jsp" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/xml" prefix="x" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@page import="java.text.DateFormat"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.GregorianCalendar"%>
+<%@page import="java.util.Calendar"%>
+<%@page import="java.util.Date"%>
+ 
+
+<!DOCTYPE html> 
+<html> 
+<head> 
+<script type="text/javascript" src="js/jquery.js"> 
+</script> 
+<script type="text/javascript"> 
+var i = setInterval(function(){$("#t").load("date.jsp"); },1000); 
+</script> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<title>JSP Page</title> 
+</head> 
+<body> 
+<div id="t"> 
+<jsp:include page="date.jsp" ></jsp:include> 
+</div> 
+<p> hi </p> 
+</body> 
+</html>

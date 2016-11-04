@@ -1,0 +1,52 @@
+{
+    "Amanecer": "6:03 am",
+    "Visibilidad": "9.99 km",
+    "Pais": "Venezuela",
+    "Humedad": "67%",
+    "Previsiones": "\n<img src=\"http://l.yimg.com/a/i/us/we/52/30.gif\"/><br />\n<b>Current Conditions:</b><br />\nPartly Cloudy, 36 C<BR />\n<BR /><b>Forecast:</b><BR />\nSat - Mostly Sunny. High: 37 Low: 27<br />\nSun - Mostly Sunny. High: 38 Low: 28<br />\nMon - Sunny. High: 37 Low: 28<br />\nTue - Partly Cloudy. High: 36 Low: 28<br />\nWed - Isolated Thunderstorms. High: 35 Low: 26<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Maracaibo__VE/*http://weather.yahoo.com/forecast/VEXX0018_c.html\">Full Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)<br/>\n",
+    "Presion": "982.05 hPa",
+    "Ultima Actualizacion": "Sat, 26 Sep 2015 1:29 pm AST",
+    "Temperatura": "36",
+    "Velocidad": "km/h",
+    "Direccion Vientos": "",
+    "Ciudad": "Maracaibo",
+    "pronostico": [
+        {
+            "day": "Sat",
+            "date": "26 Sep 2015",
+            "low": "27",
+            "high": "37",
+            "text": "Mostly Sunny"
+        },
+        {
+            "day": "Sun",
+            "date": "27 Sep 2015",
+            "low": "28",
+            "high": "38",
+            "text": "Mostly Sunny"
+        },
+        {
+            "day": "Mon",
+            "date": "28 Sep 2015",
+            "low": "28",
+            "high": "37",
+            "text": "Sunny"
+        },
+        {
+            "day": "Tue",
+            "date": "29 Sep 2015",
+            "low": "28",
+            "high": "36",
+            "text": "Partly Cloudy"
+        },
+        {
+            "day": "Wed",
+            "date": "30 Sep 2015",
+            "low": "26",
+            "high": "35",
+            "text": "Isolated Thunderstorms"
+        }
+    ],
+    "Tiempo": "Fair",
+    "Atardecer": "6:09 pm"
+}

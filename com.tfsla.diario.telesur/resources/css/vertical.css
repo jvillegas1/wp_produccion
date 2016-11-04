@@ -1,0 +1,30 @@
+/* Pager style */
+#slide {
+	list-style: none outside none;
+	overflow: hidden; 
+	width: 433px; 
+	height: 290px; 
+	padding: 0px;
+	margin: 0 0 10px;
+}
+#slide-pager {
+	clear:both;
+	list-style-type:none;
+	overflow:hidden;
+	margin:14px 0 16px;
+	padding:0;
+}
+#slide-pager li {
+	float: left;
+}
+#slide-pager li a{
+	margin:0 2px;
+	padding:0 7px;
+	border:1px solid #ccc;
+	display:inline-block;
+}
+#slide-pager li a.usl-current{
+	text-decoration: underline;
+	background-color: #e8e8e8;
+}
+

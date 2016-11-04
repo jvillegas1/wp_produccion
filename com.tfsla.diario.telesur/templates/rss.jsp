@@ -1,0 +1,114 @@
+<%@ taglib prefix="nt" uri="http://www.tfsla.com/taglib/tfsNewsTags" %>
+<%@ include file="../elements/TS_Common_Libraries.jsp" %>
+<%
+response.setHeader("Cache-Control","no-cache"); 
+response.setHeader("Pragma","no-cache"); 
+response.setDateHeader ("Expires", -1);
+%>
+<%@ page trimDirectiveWhitespaces="true" %>
+<%
+org.opencms.jsp.CmsJspXmlContentBean cms = new org.opencms.jsp.CmsJspXmlContentBean(pageContext, request, response);
+String urlSite  = request.getScheme()+"://"+request.getServerName();
+%>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0">
+ <meta http-equiv="Cache-control" content="no-cache" />
+<channel>
+ 
+ <cms:contentload collector="singleFile" param="%(opencms.uri)" >
+ 
+    <title><cms:contentshow element="titulo" /></title>
+    <link><%=urlSite%></link>
+ 
+           <cms:contentcheck ifexists="descripcion">
+              <description><cms:contentshow element="descripcion" /></description>
+           </cms:contentcheck>
+ 
+          <cms:contentcheck ifexists="categoria">
+       <category><cms:contentshow element="categoria" /></category>
+    </cms:contentcheck>
+ 
+    <c:set var="pagina" scope="page"><cms:contentshow element="pagina"/></c:set>
+    <c:set var="cantidad" scope="page"><cms:contentshow element="cantidad_items"/></c:set>
+ 
+    <c:set var="seccion" scope="page">
+      <cms:contentcheck ifexists="seccion"><cms:contentshow element="seccion"/></cms:contentcheck>
+    </c:set>
+ 
+    <c:choose>
+    
+  <c:when test='${pagina == "home"}'>
+ 
+ <nt:news-list  advancedfilter="seccion:news AND NOT home.zone:ultimas " size="${cantidad}" order="user-modification-date DESC" >
+      <item>
+     <title><![CDATA[<nt:title/>]]></title>
+     <link><%=request.getScheme()+"://"+request.getServerName()%><nt:link/></link>
+     <description><![CDATA[<nt:sub-title/>]]></description>
+     <nt:categories>
+     <nt:conditional-include onposition="first">
+     <category><![CDATA[<nt:category-description/>]]></category>
+     </nt:conditional-include>
+     </nt:categories>
+     <pubDate><nt:last-modified format="dd.MM.yy" /></pubDate>
+     <lastTime><nt:last-modified format="EEE, d MMM yyyy HH:mm:ss "/></lastTime> 
+     <nt:preview-image>
+           <enclosure url="<%=request.getScheme()+"://"+request.getServerName()%><nt:image-path/>" type="image/jpeg"><![CDATA[<nt:image-description/>]]></enclosure>           	
+           <thumbnails  url="<%=request.getScheme()+"://"+request.getServerName()%><nt:image-path width="360" height="295" scaletype="2"/>" type="image/jpeg"></thumbnails>
+     </nt:preview-image >
+ 
+     <nt:video-flash>
+            <enclosure url="<%=request.getScheme()+"://"+request.getServerName()%><nt:video-path/>" type="video/x-flv"><![CDATA[<nt:video-title/>]]></enclosure>
+            <attribution>
+                   <credit><![CDATA[<nt:video-publisher />]]></credit>
+	           <copyright><![CDATA[<nt:video-author />]]></copyright>
+	        </attribution>   
+	        <caption><![CDATA[<nt:video-description/>]]></caption>
+     </nt:video-flash>
+ 
+     <nt:authors>	
+         <author><![CDATA[<nt:author-name/>]]></author>
+     </nt:authors>
+ 
+     <content><![CDATA[<nt:body />]]></content>
+      </item>
+ </nt:news-list>
+  </c:when>
+ 
+  <c:otherwise>
+ <nt:news-list order="priority,modification-date" onmainpage="section" section="${seccion}" size="${cantidad}" >
+   <item>
+     <title><![CDATA[<nt:title/>]]></title>
+     <link><%=request.getScheme()+"://"+request.getServerName()%><nt:link/></link>
+     <description><![CDATA[<nt:sub-title/>]]></description>
+    <nt:categories>
+     <nt:conditional-include onposition="first">
+     <category><![CDATA[<nt:category-description/>]]></category>
+     </nt:conditional-include>
+     </nt:categories>
+     <pubDate><nt:last-modified format="dd.MM.yy" /></pubDate>
+     <lastTime><nt:last-modified format="EEE, d MMM yyyy HH:mm:ss "/></lastTime>
+     <nt:preview-image>
+           <enclosure url="<%=request.getScheme()+"://"+request.getServerName()%><nt:image-path />" type="image/jpeg"><![CDATA[<nt:image-description/>]]></enclosure>
+           <thumbnails  url="<%=request.getScheme()+"://"+request.getServerName()%><nt:image-path width="360" height="295" scaletype="2"/>" type="image/jpeg"></thumbnails>
+     </nt:preview-image >
+ 
+     <nt:video-flash>
+            <enclosure url="<%=request.getScheme()+"://"+request.getServerName()%><nt:video-path/>" type="video/x-flv"><![CDATA[<nt:video-title/>]]></enclosure>
+     </nt:video-flash>
+ 
+     <nt:authors>	
+         <author><![CDATA[<nt:author-name/>]]></author>
+     </nt:authors>
+ 
+     <content><![CDATA[<nt:body />]]></content>
+      </item>
+ </nt:news-list>
+  </c:otherwise>
+    </c:choose>
+ 
+ </cms:contentload>
+ 
+</channel>
+ 
+</rss>

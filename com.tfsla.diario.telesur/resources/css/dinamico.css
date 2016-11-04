@@ -1,0 +1,48 @@
+<%@ taglib prefix="cms" uri="http://www.opencms.org/taglib/cms" %>
+
+@charset "UTF-8";
+/* CSS Document  */
+
+
+
+#cintillo-728{
+	width:728px;
+	height:90px;
+	background-image:url('<cms:link>/arte/gira-del-papa/GiraDelPapaLatam_728x90.jpg</cms:link>');
+	background-repeat:no-repeat;
+	}
+	
+#cintillo-950{
+	width:950px;
+	height:90px;
+	background-image:url('<cms:link>/arte/gira-del-papa/GiraDelPapaLatam_950x90.jpg</cms:link>');
+	background-repeat:no-repeat;
+	}
+
+.texto-2{
+	color:#FFFFFF;
+	display:block;
+	width:280px;
+	text-align:right;	
+	text-shadow:2px 2px 2px #494949;
+	font-size:23px;
+	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	
+	padding-right:40px;
+	padding-top:15px;
+	float:right;
+	}
+.imagen{
+	margin-right:-35px;
+	margin-top:-40px;
+	float:right;
+	width:32px;
+	height:32px;
+	display:block;
+	}
+	
+
+	
+
+
+	

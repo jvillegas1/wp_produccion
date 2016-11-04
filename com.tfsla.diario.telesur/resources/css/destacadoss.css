@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+/* Destacados */
+#destacados {max-width:1150px;margin:auto;padding:5px 0 30px;position:relative;overflow:hidden;width:100%}
+
+/* Destacado 1 */
+#destacados aside.v1 {float:left;background:#efefef;width:189px}
+	#destacados aside.v1 .bnrs-side img {display:block;margin:3px}
+			
+#destacados .content.v1 {overflow:hidden;width:961px;float:left}
+	#destacados .content.v1 article {margin:5px;width:calc(33.33% - 10px)}
+	#destacados .content.v1 article.important {width:calc(66.66% - 10px)}
+	
+	#destacados .content.v1 .twitter {width:calc(33.33% - 10px);float:left;margin:5px}
+		#destacados .content.v1 .twitter iframe {height:438px}
+	
+	#destacados .content.v1 .wpArticles {clear:both;overflow:hidden}
+	
+	#destacados .content.v1 h6 {margin:0 5px;clear:both;position:relative;padding:0;overflow:hidden}
+		#destacados .content.v1 h6 a {float:right;width:30px;height:30px;border:1px solid #e3e3e3;border-radius:3px 3px 0 0;border-bottom:none;font-size:30px;text-align:center;line-height:30px}
+		#destacados .content.v1 h6 a:after {content:'+'}
+		#destacados .content.v1 h6 a.less:after {content:'-'}
+	
+	#destacados .content.v1 .listNotas {overflow:hidden;height:92px}
+		#destacados .content.v1 .listNotas.abierto {height:auto}
+		#destacados .content.v1 .listNotas .wpSmallImg {margin-right:10px}
+		#destacados .content.v1 .listNotas h4 {font-size:14px}
+
+
+	
+@media (max-width:1100px){
+	/*destacado 1*/
+	#destacados aside.v1 {display:none}
+	#destacados .content.v1 {width:100%;float:none}
+
+}	
+@media (max-width:980px){
+	/*destacado 1*/
+	#destacados aside.v1 {width:calc(100% - 10px);float:none;margin:5px;height:60px;overflow:hidden;background:#e3e3e3}
+		#destacados aside.v1 .bnrs-side img {display:none}
+	#destacados .content.v1 article {width:calc(100% - 10px);margin-right:0}
+	#destacados .content.v1 article.important {width:calc(100% - 10px)}
+	#destacados .content.v1 .twitter {width:calc(50% - 10px)}
+		#destacados .content.v1 .twitter iframe{height:543px}
+	#destacados .content.v1 .wpArticles{clear:none;float:left;width:50%;}
+
+}
+@media (max-width:639px){
+	/*destacado 1*/
+	#destacados .content.v1 article {width:calc(100% - 10px)}
+	#destacados .content.v1 article.important {width:100%;margin:0}
+	#destacados .content.v1 article.important h2 {font-size:16px;line-height:18px;font-weight:600}
+	#destacados .content.v1 .twitter {width:calc(100% - 10px)}
+		#destacados .content.v1 .twitter iframe {height:530px}
+	#destacados .content.v1 .wpArticles {clear:none;float:left;width:100%;}
+		#destacados .content.v1 .wpArticles article img {width:100%;margin-right:0;float:none}
+		#destacados .content.v1 .wpArticles article h2 {color:#FFF;background:rgba(0,0,0,0.5);font-size:16px;padding:12px 15px;position:absolute;z-index:9;bottom:0;left:0;line-height:18px;width:calc(100% - 30px)}
+	#destacados .content.v1 h6 {height:31px}
+		#destacados .content.v1 h6 a {display:block}
+	#destacados .content.v1 .listNotas {overflow:hidden;height:275px}
+
+@media (max-width:400px){
+	/* destacado 2 */
+	#destacados .content.v2 article.important h2{font-size:18px;line-height:21px}
+	#destacados .content.v2 article.important h4{font-size:14px}
+	#destacados .content.v2 .asideNotas article img {width:125px}
+	#destacados .content.v2 .asideNotas article h5 {position:absolute;top:0;left:134px}
+	#destacados .content.v2 .wpArticlesMin article .wpSmallImg {width:125px}
+	#destacados .content.v2 .wpArticlesMin article h4 {font-size:14px}
+	#destacados .content.v2 .wpArticlesMin article h5 {margin:5px 0}
+	/* destacado 3 */
+	#destacados .content.v3 article.important h2{font-size:18px;line-height:21px}
+	#destacados .content.v3 article.important h4{font-size:14px}
+	#destacados aside.v3 .wpVideos article h5 {font-size:11px}
+	#destacados .content.v3 .asideNotas article img {width:125px}
+	#destacados .content.v3 .asideNotas article h5 {position:absolute;top:0;left:134px}
+}

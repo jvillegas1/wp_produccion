@@ -1,0 +1,287 @@
+<%@ include file="../elements/TS_Common_Libraries.jsp" %>
+  
+<!doctype html>
+<html>
+  <head>
+<cms:include page="../elements/TS_Common_Head.jsp" >
+   <cms:param name="template">Clima</cms:param>
+  </cms:include>
+        
+    <title>Clima</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    
+<style type="text/css">
+/** COMIENZO CSS DE CLIMA */
+		
+		#search{width: 344px; float: right;margin-top: 33px;}		
+		.form-search{color: #555; background-color: #FFF; background-image: none; border: 1px solid #CCC; border-radius: 4px; box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset; transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;width: 51%; height: 20px; padding: 6px 12px; font-size: 14px; line-height: 1.42857; float: left; margin: 0px 0px 0px 68px;}		
+		/**.btns {background-color: #FFF; background:  url('/arte/img/ico-lupa.png'); font-size: 16px; color: #FFF; text-align: center; border: 0px none; font-family: "Arimo",sans-serif; font-weight: 700;}	*/	
+		.btn-defa{display: inline-block; font-size: 14px; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; border: 1px solid #CCC; border-radius: 4px; -moz-user-select: none; height: 34px !important; width: 10% !important; float: left;background-image: none;-moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none;}
+		.text{border: none; font-size: 15px; font-family: Arial, Verdana; border-radius: 4px; color: #0B0B61;text-align: center; font-weight:bold; visibility:hidden;}		
+		.dat{float: right !important;}		
+		.tiempoClima {width: 75px; height: 75px;}		
+		.link{float:right; width:10; line-height:30px; font-size:15px; color:#191f43; padding:0 10px; border:1px solid #ecebed; margin:24px 18px}
+					
+		/**estados de cielo - fondos*/
+		.despejado{background-image:url('/arte/img/despejado.jpg');}
+		.helada{background-image:url('/arte/img/helada.jpg')}
+		.soleado{background-image:url('/arte/img/hot.jpg')}
+		.huracan{background-image:url('/arte/img/Huracan.jpg')}
+		.llovizna{background-image:url('/arte/img/llovizna.jpg')}
+		.lluvia{background-image:url('/arte/img/lluvia.jpg')}
+		.lluvianoche{background-image:url('/arte/img/lluvia-noche.jpg')}
+		.nieve{background-image:url('/arte/img/nieve.jpg')}
+		.nocheclara{background-image:url('/arte/img/nocheclara.jpg')}
+		.nublado{background-image:url('/arte/img/nublado.jpg')}
+		.nubladonoche{background-image:url('/arte/img/nubladonoche.png')}
+		.parcialmentenubladonoche{background-image:url('/arte/img/parcialmentenubladonoche.jpg')}
+		.parcialnublado{background-image:url('/arte/img/parcialnublado.jpg')}
+		.polvo{background-image:url('/arte/img/polvo.jpg')}
+		.sindatos{background-image:url('/arte/img/sindatos.jpg')}
+		.tormenta{background-image:url('/arte/img/tormenta.jpg')}
+		.tornado{background-image:url('/arte/img/tornado.jpg')}
+		.ventoso{background-image:url('/arte/img/ventoso.jpg')}
+		.ventosonoche{background-image:url('/arte/img/ventoso-noche.jpg')}
+		
+		/**estados de cielo - iconos 138px*/
+		.Helada{background-image:url('/arte/img/Helada-138px.png')}
+		.Soleado{background-image:url('/arte/img/Despejado-138px.png')}
+		.Huracan{background-image:url('/arte/img/Huracan-138px.png')}
+		.Llovizna{background-image:url('/arte/img/Llovizna-138px.png')}
+		.Lluvia{background-image:url('/arte/img/Lluvia-138px.png')}
+		.Luna{background-image:url('/arte/img/Luna-138px.png')}
+		.Lluvianoche{background-image:url('/arte/img/Lluvia-138px.png')}
+		.Nieve{background-image:url('/arte/img/Nieve-138px.png')}
+		.Nublado{background-image:url('/arte/img/Nublado-138px.png')}
+		.Nubladonoche{background-image:url('/arte/img/Nublado-noche-138px.png')}
+		.ParcialNublado{background-image:url('/arte/img/ParcialNublado-138px.png')}
+		.Sindatos{background-image:url('/arte/img/SinDatos-138px.png')}
+		.Polvo{background-image:url('/arte/img/Polvo-138px.png')}
+		.Tormenta{background-image:url('/arte/img/Tormenta-138px.png')}
+		.Tornado{background-image:url('/arte/img/Tornado-138px.png')}
+		.Ventoso{background-image:url('/arte/img/Ventoso-138px.png')}
+		.Ventosonoche{background-image:url('/arte/img/Ventoso-138px.png')}
+		
+		/**estados de cielo - iconos 75px*/
+		.Helada75{background-image:url('/arte/img/Helada-75px.png')}
+		.Soleado75{background-image:url('/arte/img/Despejado-75px.png')}
+		.Huracan75{background-image:url('/arte/img/huracan-75x75.png')}
+		.Llovizna75{background-image:url('/arte/img/Llovizna-75px.png')}
+		.Lluvia75{background-image:url('/arte/img/Lluvia-75px.png')}
+		.Luna75{background-image:url('/arte/img/Luna-75px.png')}
+		.Lluvianoche75{background-image:url('/arte/img/Lluvia-75px.png')}
+		.Nieve75{background-image:url('/arte/img/Nieve-75px.png'); background-repeat: no-repeat;}
+		.Nublado75{background-image:url('/arte/img/Nublado-75px.png')}
+		.Nubladonoche75{background-image:url('/arte/img/Nublado-noche-75px.png')}
+		.ParcialNublado75{background-image:url('/arte/img/ParcialNublado-75px.png')}
+		.Sindatos75{background-image:url('/arte/img/SinDatos-75px.png')}
+		.Polvo75{background-image:url('/arte/img/Polvo-75px.png')}
+		.Tormenta75{background-image:url('/arte/img/Tormenta-75px.png')}
+		.Tornado75{background-image:url('/arte/img/Tornado-75px.png')}
+		.Ventoso75{background-image:url('/arte/img/Ventoso-75px.png')}
+		.Ventosonoche75{background-image:url('/arte/img/Ventoso-75px.png');}
+		
+		/**estados de cielo - iconos 32px*/
+		.Helada32{background-image:url('/arte/img/Helada-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Soleado32{background-image:url('/arte/img/Despejado-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Huracan32{background-image:url('/arte/img/huracan-32x32.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Llovizna32{background-image:url('/arte/img/Llovizna-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Lluvia32{background-image:url('/arte/img/Lluvia-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Luna32{background-image:url('/arte/img/Luna-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Lluvianoche32{background-image:url('/arte/img/Lluvia-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Nieve32{background-image:url('/arte/img/Nieve-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Nublado32{background-image:url('/arte/img/Nublado-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Nubladonoche32{background-image:url('/arte/img/Nublado-noche-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.ParcialNublado32{background-image:url('/arte/img/ParcialNublado-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Sindatos32{background-image:url('/arte/img/SinDatos-21px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Polvo32{background-image:url('/arte/img/Polvo-32px.png');background-repeat: no-repeat;width: 150px;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Tormenta32{background-image:url('/arte/img/Tormenta-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Tornado32{background-image:url('/arte/img/Tornado-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Ventoso32{background-image:url('/arte/img/Ventoso-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Ventosonoche32{background-image:url('/arte/img/Ventoso-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		
+		#clima{margin:auto;width:935px;font-family:'Arimo', sans-serif; background-size:cover;background-repeat:no-repeat;color:#FFF;}
+		#clima strong{font-weight:700}
+		#clima .cit {line-height:80px;overflow:hidden}
+		#clima .cit span{float:left;margin-left:35px;font-size:25px;}
+		/**#clima .cit input{float:right;width:270px;line-height:30px;font-size:15px;color:#191f43;padding:0 10px;border:1px solid #ecebed;margin:24px 18px}*/
+		#clima .hoy{background:rgba(0,0,0,0.2);padding:30px;overflow:hidden;text-shadow:1px 1px 2px rgba(0,0,0,0.8)}
+		#clima .hoy .climaHoy{box-sizing:border-box;float:left}
+		#clima .hoy .climaHoy i{float:left;}
+		#clima .hoy .climaHoy .dat{float:left;margin:0 30px;}
+		#clima .hoy .climaHoy .dat .grados{font-weight:400;font-size:55px;}
+		#clima .hoy .climaHoy .dat small{position:relative;left:5px;top:-10px}
+		#clima .hoy .climaHoy .dat span{color:#1a1f43;clear:both;display:block;text-align:center;background:#FFF;font-size:18px;padding:5px 0;border-radius:5px;margin:7px 0;text-shadow:none}
+		#clima .hoy .climaHoy .dat .viento{background:url('/arte/img/icon-viento.png') no-repeat left bottom;padding-left:35px;line-height:20px;font-size:18px;margin-top:12px}
+		#clima .hoy .max-min{min-height:140px;border-right:1px solid #FFF;padding-right:20px;font-size:15px;float:left;margin-right:35px}
+		#clima .hoy .max-min span{display:block;line-height:23px}
+		#clima .hoy .max-min hr{border:none;border-bottom:1px solid #FFF;margin:7px 0 12px;width:70px}
+		#clima .hoy .sol{overflow:hidden;margin-bottom:40px;margin-top:50px}
+		#clima .hoy .sol div{float:left;padding-left:70px;line-height:40px;padding-right:20px;margin-right:20px}
+		#clima .hoy .sol div.sale{border-right:1px solid #FFF;background:url('/arte/img/icon-salida-sol.png') left center no-repeat;}
+		#clima .hoy .sol div.puesta{background:url('/arte/img/icon-puesta-sol.png') left center no-repeat;}
+		
+		
+		#clima .semana{background:rgba(250,250,250,0.8);color:#878787;padding:25px 0;overflow:hidden;}
+		#clima .semana .day{box-sizing:border-box;float:left;border-left:1px solid #dadada;width:20%;padding:0 15px;font-size:14px;}
+		#clima .semana .day:first-child{border:none}
+		#clima .semana .day i, #clima .semana .day .dat{float:left;margin-right:10px}
+		#clima .semana .day .dat h3{font-size:16px;color:#1a1f43;margin-bottom:5px;}
+		#clima .day    .dat span, #clima .semana .day .otherDate span{display:block;line-height:1.2}
+		#clima .semana .day .otherDate{clear:both;padding-top:10px}
+
+		@media (max-width: 1024px){
+			 .postlist{width:100%}
+			 .imagen {margin-left: 200px}
+			 .imagen #picture {width:100%}
+			 .picture-youtube {width:100%;margin-left: 200px}	
+			 .reportbar .sharepo {width:30%}
+			 .new-bajada2 .autrepo{width: 54%;}
+			 .col-quat{width:100%}
+			 .stitle{font-size:16px}
+			 .toplsch {width: 50%;}
+			 .simg2 {display:none}
+			 .saut {font-size:14px}
+			 .scont{width:95%}
+			 .scont1{width:95%}
+			 .schedule2 {border-bottom: 1px solid #CCCCCC;}
+			 .videocheck{margin-top:-55px}
+			 .menmobile{display: block !important}
+			 .reponews { margin-bottom: 100px;}		
+			 .btnLive{display:none !important}	
+		    
+		@media (max-width:980px){
+			header{background:url(../header-640.jpg) no-repeat top center;height:210px}
+			footer{background:url(../footer-640.jpg) no-repeat top center;height:429px}
+			/*header - footer*/
+			#clima{width:100%}
+			#clima .hoy{text-align:center}
+			#clima .hoy .climaHoy, #clima .hoy .max-min{display:inline-block;float:none;text-align:left}
+			#clima .hoy .max-min{border:none;margin-right:0}
+			#clima .hoy .sol{width:460px;border-top:1px solid #FFF;margin:10px auto 30px;padding-top:20px}
+			#clima .hoy .detalle{width:460px;margin:auto;text-align:left}
+			#clima .semana{text-align:center;padding:20px 0}
+			#clima .semana .day{display:inline-block;width:36%;float:none;text-align:left;margin:20px 0}
+			#clima .semana .day:nth-child(3){border:none}
+				}
+		@media (max-width:639px){
+			header{background:url(../header-320.jpg) no-repeat top center;height:60px}
+			footer{background:url(../footer-320.jpg) no-repeat top center;height:365px}
+			/*header - footer*/
+			#clima .cit{line-height:1}
+			#clima .cit span, #clima .cit input{margin:20px;float:none;display:block}
+			#clima .hoy{padding:20px}
+			#clima .hoy .climaHoy{padding-bottom:10px;border-bottom:1px solid #FFF;margin-bottom:10px;width:100%}
+			#clima .hoy .climaHoy .dat{margin:0 0 0 25px}
+			#clima .hoy .max-min{float:left}
+			#clima .hoy .sol{float:right;width:80px;margin:0;border:none;padding:0}
+			#clima .hoy .sol div{float:none;padding:0;padding-top:40px;line-height:1.2;margin-right:0px;margin-bottom:20px;background-position:top center !important;border:none !important}	
+			#clima .hoy .detalle{width:100%;clear:both;margin-top:10px}
+			#clima .semana .day{display:block;width:170px;float:none;text-align:left;margin:20px auto;border:none;padding:30px 0;border-bottom:1px solid #dadada !important;}
+			#clima .semana .day:last-child{border:none !important}
+				}
+  </style>  
+  </head>
+  <body>
+
+            <cms:include page="../elements/TS_Common_Header.jsp" >
+	    <cms:param name="pageTitle">Clima</cms:param>
+	    <cms:param name="pageSeccion">Clima</cms:param>
+	    <cms:param name="subMenu">si</cms:param>
+	    <cms:param name="latest">no</cms:param>
+	    <cms:param name="agenda">si</cms:param>
+	  </cms:include>
+
+
+<!-- Container -->
+	<div id="container">
+	<cms:include page="../elements/TS_Common_LiveBox.jsp" />
+	<div class="wrapper"> 
+	<!-- Inicio Clima -->
+ <section>
+
+    <div id="clima" class="despejado"> <!--imagen de fondo que corresponde al estado del tiempo -->
+      <div class="cit">
+        <span><div id="ciudad"></div></span>
+        <span><div id="pais"></div></span>
+<div id="search">
+      <input type="text" name="city" id="localidad" value="" class="form-search" placeholder="Escribir Ciudad ..." >
+      <button type="button" id="buscar" class="btns btn-defa" value="" style='background: transparent url("/arte/ico-lupa.png") no-repeat scroll center center;'></button>
+</div>
+      </div>
+
+    <!-- hoy -->
+      <div class="hoy">
+          <div class="climaHoy">
+            <i><img id ="imagen" src="/arte/img/trans-138.png" class="Tormenta"></i>
+            <div class="dat">
+              <div id="temperatura" class="grados"><small></small></div> 
+              <div><span id="TiempoE"></span></div>
+              <input type="text" id="Tiempo" value="" class="text">
+              <strong><div id="velocidad" class="viento"></div></strong>
+            </div>
+          </div>
+          <div class="max-min">
+            <span>Humedad:    <strong><div id="humedad"></div></strong></span>
+            <span>Visibilidad:<strong><div id="visibilidad"></div></strong></span>
+            <span>Presión:    <strong><div id="presion"></div></strong></span>
+          </div>
+          <div class="sol">
+            <strong><div id="amanecer" class="sale">pm</div></strong>
+            <strong><div id="atardecer"class="puesta">pm</div></strong>
+          </div>
+      </div>
+    <!-- hoy -->
+    <!-- Pronosticos -->
+      <div class="semana">
+        <div class="day">
+        </div>
+      </div>
+
+    <!-- Pronosticos -->  
+    </section>
+					
+	<!-- Fin Clima -->
+	</div><!--wrapper-->
+	</div><!--conteiner--> 
+
+  <!--  g  --> 
+    <cms:include page="../elements/TS_Common_Footer.jsp" />
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="<cms:link>/system/modules/com.tfsla.diario.telesur/resources/js/clima.js</cms:link>"></script>
+    <script type="text/javascript" >
+		$(document).ready(function(){
+			city=[]; 
+			files=[];
+			(function(){
+				var jqxhr = $.getJSON( "http://www.telesurtv.net/_static_rankings/jsonClima/Config.json", function(data) {
+				   $.each( data, function( key, val ) {
+   						 city.push(data[key].ciudad);
+   						 files[data[key].ciudad]=data[key].file;
+ 					 });
+				})
+				  .done(function() {
+				   // console.log( "second success" );
+				  })
+				  .fail(function() {
+				    console.log( "error leyendo archivo de configuración" );
+				  })
+			})();
+		});
+
+		$(function() {
+			var ciudades = city;
+			$("#localidad").autocomplete({
+				source: ciudades,
+         select: function( event, ui ) {
+			$("#archivojson").val(files[ui.item.label]);
+			$("#buscar").click();
+         }
+			});
+		});
+		</script>
+  </body>
+</html>
+
+

@@ -1,0 +1,52 @@
+{
+    "Amanecer": "5:57 am",
+    "Visibilidad": "9.99 km",
+    "Pais": "Venezuela",
+    "Humedad": "43%",
+    "Previsiones": "\n<img src=\"http://l.yimg.com/a/i/us/we/52/30.gif\"/><br />\n<b>Current Conditions:</b><br />\nPartly Cloudy, 30 C<BR />\n<BR /><b>Forecast:</b><BR />\nSat - Partly Cloudy. High: 34 Low: 23<br />\nSun - PM Thunderstorms. High: 36 Low: 23<br />\nMon - Partly Cloudy. High: 36 Low: 24<br />\nTue - Partly Cloudy. High: 36 Low: 24<br />\nWed - Isolated Thunderstorms. High: 36 Low: 23<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Barinas__VE/*http://weather.yahoo.com/forecast/VEXX0003_c.html\">Full Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)<br/>\n",
+    "Presion": "982.05 hPa",
+    "Ultima Actualizacion": "Sat, 26 Sep 2015 11:28 am AST",
+    "Temperatura": "30",
+    "Velocidad": "4.83km/h",
+    "Direccion Vientos": "180",
+    "Ciudad": "Barinas",
+    "pronostico": [
+        {
+            "day": "Sat",
+            "date": "26 Sep 2015",
+            "low": "23",
+            "high": "34",
+            "text": "Partly Cloudy"
+        },
+        {
+            "day": "Sun",
+            "date": "27 Sep 2015",
+            "low": "23",
+            "high": "36",
+            "text": "PM Thunderstorms"
+        },
+        {
+            "day": "Mon",
+            "date": "28 Sep 2015",
+            "low": "24",
+            "high": "36",
+            "text": "Partly Cloudy"
+        },
+        {
+            "day": "Tue",
+            "date": "29 Sep 2015",
+            "low": "24",
+            "high": "36",
+            "text": "Partly Cloudy"
+        },
+        {
+            "day": "Wed",
+            "date": "30 Sep 2015",
+            "low": "23",
+            "high": "36",
+            "text": "Isolated Thunderstorms"
+        }
+    ],
+    "Tiempo": "Windy",
+    "Atardecer": "6:02 pm"
+}

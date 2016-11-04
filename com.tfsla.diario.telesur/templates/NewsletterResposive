@@ -1,0 +1,375 @@
+<%@ include file="../elements/TS_Common_Libraries.jsp" %>
+
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+    <meta name="viewport" content="initial-scale=1.0">    <!-- So that mobile webkit will display zoomed in -->
+    <meta name="format-detection" content="telephone=no"> <!-- disable auto telephone linking in iOS -->
+
+    <title>Boletin TeleSUR</title>
+    <style type="text/css">
+
+        /* Resets: see reset.css for details */
+        .ReadMsgBody { width: 100%; background-color: #ebebeb;}
+        .ExternalClass {width: 100%; background-color: #ebebeb;}
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height:100%;}
+        body {-webkit-text-size-adjust:none; -ms-text-size-adjust:none;}
+        body {margin:0; padding:0;}
+        table {border-spacing:0;}
+        table td {border-collapse:collapse;}
+        .yshortcuts a {border-bottom: none !important;}
+
+        /* Constrain email width for small screens */
+        @media screen and (max-width: 600px) {
+            table[class="container"] {
+                width: 95% !important;
+            }
+            img[class="social"] {
+            	width: 24px;
+            	height: 24px;
+
+            }
+        }
+
+        /* Give content more room on mobile */
+        @media screen and (max-width: 480px) {
+            td[class="container-padding"] {
+                padding-left: 12px !important;
+                padding-right: 12px !important;
+            }
+        }
+
+
+        /* Styles for forcing columns to rows */
+        @media only screen and (max-width : 600px) {
+
+            /* force container columns to (horizontal) blocks */
+            td[class="force-col"] {
+                display: block;
+                padding-right: 0 !important;
+            }
+            table[class="col-3"] {
+                /* unset table align="left/right" */
+                float: none !important;
+                width: 100% !important; 
+
+                /* change left/right padding and margins to top/bottom ones */
+                margin-bottom: 12px;
+                padding-bottom: 12px;
+                border-bottom: 1px solid #eee;
+            }
+
+            /* remove bottom border for last column/row */
+            table[id="last-col-3"] {
+                border-bottom: none !important;
+                margin-bottom: 0;
+            }
+
+            /* align images right and shrink them a bit */
+            img[class="col-3-img"] {
+                float: right;
+                margin-left: 6px;
+                max-width: 130px;
+            }
+        }
+
+    </style>
+</head>
+<body style="margin:0; padding:10px 0;" bgcolor="#ebebeb" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" border-radius="20px">
+
+<br>
+
+<!-- 100% wrapper (grey background) -->
+<table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" bgcolor="#ebebeb" style="padding-top:15px">
+  <tr>
+    <td align="center" valign="top" bgcolor="#ebebeb" style="background-color: #ebebeb;">
+
+      <!-- 600px container (white background) -->
+      <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" bgcolor="#ffffff">
+        <tr>
+          <td class="container-padding" bgcolor="#ffffff" style="background-color: #ffffff; padding-left: 30px; padding-right: 30px; font-size: 13px; line-height: 20px; font-family: Helvetica, sans-serif; color: #333;" align="left">
+            <br>
+
+            <!-- ### EMPIEZA EL CONTENIDO ### -->
+            <img src="http://exwebserv.telesurtv.net/correo_masivo/img/propuestanewsletter.jpg" style="width:100%; height=15%;">
+            <br>
+            <br>
+            <div width="100%" margin="10px">
+	            <span style="font-weight: bold; font-size: 18px; line-height: 24px; color: #D03C0F; margin: auto; margin-top: 15px;" align="left">
+	            <?php echo date("d/m/Y", time()); ?>
+	            </span>
+	            <a href="https://www.youtube.com/user/telesurtv"><img src="http://telesurtv.net/arte/icn-youtube.gif" width="28" height="28" align="right" class="social"></a>
+	            <a href="http://www.pinterest.com/telesurtv/"><img src="http://telesurtv.net/arte/icn-pinterest.gif" width="28" height="28" align="right" class="social"></a>
+	            <a href="http://instagram.com/telesurtv"><img src="http://telesurtv.net/arte/icn-instagram.gif" width="28" height="28" align="right" class="social"></a>
+	            <a href="https://plus.google.com/118206615613074383260/posts"><img src="http://telesurtv.net/arte/icn-googleplus.gif" width="28" height="28" align="right" class="social"></a>
+	            <a href="http://twitter.com/teleSURtv"><img src="http://telesurtv.net/arte/icn-twitter.gif" width="28" height="28" align="right" class="social"></a>
+                <a href="http://facebook.com/teleSUR"><img src="http://telesurtv.net/arte/icn-facebook.gif" width="28" height="28" align="right" class="social"></a>
+            </div>
+            <br>
+            <hr>
+            <!-- EMPIEZA 1ERA FILA (3 COLUMNAS) -->
+            <span class="titulo" style="background-color: #ff0000; font-weight: bold; font-size: 14px; line-height: 24px; color: #fff; margin-top: 15px; padding: 3px; padding-right: none;">
+            LATINOAM&Eacute;RICA
+            </span>
+            <br>
+            <br>
+            <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
+            
+              <tr>
+              
+              <nt:news-list section="news" category="latinaamerica" size="3" page="1" zone="normal" onmainpage="section" >
+              
+                <td class="force-col" style="padding-right: 20px;" valign="top">
+
+                    <!-- ### COLUMNA 3 ### -->
+                    <table border="0" cellspacing="0" cellpadding="0" width="175" align="right" class="col-3" id="last-col-3">
+                        
+                        <tr>
+                        
+                            <td align="left" valign="top" style="font-size:14px; line-height: 20px; font-family: Arial, sans-serif;">
+                           <nt:preview-image>												
+				<a href="<nt:link/>" class="her">
+					<c:set var="imageDescription" scope="page"><nt:image-description/></c:set>
+					<nt:conditional-include oncondition="${imageDescription != ''}">
+						<meta itemprop="description" content='<nt:image-description/>'>	
+						<img itemprop="contentURL" src="<nt:image-path width="175" height="130" scaletype='2'/>" class="col-3-img" width="175" height="130" alt='<nt:image-description/>' title='<nt:image-description/>' >
+					</nt:conditional-include>
+					<nt:conditional-include oncondition="${imageDescription == ''}">
+						<meta itemprop="description" content='${news.titles[news.titleSectionNum]}'>	
+						<img itemprop="contentURL" src="<nt:image-path width="175" height="130" scaletype='2'/>" class="col-3-img" width="175" height="130" alt='${news.titles[news.titleSectionNum]}' title='${news.titles[news.titleDetailNum]}' >
+					</nt:conditional-include>													
+				</a>
+			  </nt:preview-image>		
+	                            
+			    	
+                                <a href="<nt:link/>" style="color:#1A2042; font-weight:bold; text-decoration: none;"><nt:title/></a><br>
+                                <br>
+                             
+                            </td>
+                           
+                        </tr>
+                        
+                    </table>
+                </td>
+              
+              </nt:news-list>
+              </tr>
+
+            </table>
+            <!-- TERMINA 1ERA FILA (3 COLUMNAS) -->
+            <hr>
+            <!-- EMPIEZA 2DA FILA (3 COLUMNAS) -->
+            <span class="titulo" style="background-color: #ff0000; font-weight: bold; font-size: 14px; line-height: 24px; color: #fff; margin-top: 15px; padding: 3px; padding-right: none;">
+            VUELTA AL MUNDO
+            </span>
+            <br>
+            <br>
+            <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
+              <tr>
+              <nt:news-list section="news" category="world" size="3" page="1" zone="normal" onmainpage="section" >
+                <td class="force-col" style="padding-right: 20px;" valign="top">
+
+                    <!-- ### COLUMNA 3 ### -->
+                    
+                    <table border="0" cellspacing="0" cellpadding="0" width="175" align="right" class="col-3" id="last-col-3">
+                        <tr>
+                            <td align="left" valign="top" style="font-size:14px; line-height: 20px; font-family: Arial, sans-serif;">
+                          <nt:preview-image>												
+				<a href="<nt:link/>" class="her">
+					<c:set var="imageDescription" scope="page"><nt:image-description/></c:set>
+					<nt:conditional-include oncondition="${imageDescription != ''}">
+						<meta itemprop="description" content='<nt:image-description/>'>	
+						<img itemprop="contentURL" src="<nt:image-path width="175" height="130" scaletype='2'/>" class="col-3-img" width="175" height="130" alt='<nt:image-description/>' title='<nt:image-description/>' >
+					</nt:conditional-include>
+					<nt:conditional-include oncondition="${imageDescription == ''}">
+						<meta itemprop="description" content='${news.titles[news.titleSectionNum]}'>	
+						<img itemprop="contentURL" src="<nt:image-path width="175" height="130" scaletype='2'/>" class="col-3-img" width="175" height="130" alt='${news.titles[news.titleSectionNum]}' title='${news.titles[news.titleDetailNum]}' >
+					</nt:conditional-include>													
+				</a>
+			  </nt:preview-image>
+                                <a href="<nt:link/>" style="color:#1A2042; font-weight:bold; text-decoration: none;"><nt:title/></a><br>
+                                <br>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+              </nt:news-list>
+              </tr>
+
+            </table><!--TERMINA 2DA FILA (3 COLUMNAS)-->
+            <hr>
+            <span class="titulo" style="background-color: #ff0000; font-weight: bold; font-size: 14px; line-height: 24px; color: #fff; margin-top: 15px; padding: 3px; padding-right: none;">
+            DEPORTES
+            </span>
+            <br>
+            <br>
+            <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
+            <nt:news-list section="news" category="sport" size="3" page="1" zone="normal" onmainpage="section" >
+                <td class="force-col" style="padding-right: 20px;" valign="top">
+
+                    <!-- ### COLUMNA 3 ### -->
+                    
+                    <table border="0" cellspacing="0" cellpadding="0" width="175" align="right" class="col-3" id="last-col-3">
+                        <tr>
+                            <td align="left" valign="top" style="font-size:14px; line-height: 20px; font-family: Arial, sans-serif;">
+                          <nt:preview-image>												
+				<a href="<nt:link/>" class="her">
+					<c:set var="imageDescription" scope="page"><nt:image-description/></c:set>
+					<nt:conditional-include oncondition="${imageDescription != ''}">
+						<meta itemprop="description" content='<nt:image-description/>'>	
+						<img itemprop="contentURL" src="<nt:image-path width="175" height="130" scaletype='2'/>" class="col-3-img" width="175" height="130" alt='<nt:image-description/>' title='<nt:image-description/>' >
+					</nt:conditional-include>
+					<nt:conditional-include oncondition="${imageDescription == ''}">
+						<meta itemprop="description" content='${news.titles[news.titleSectionNum]}'>	
+						<img itemprop="contentURL" src="<nt:image-path width="175" height="130" scaletype='2'/>" class="col-3-img" width="175" height="130" alt='${news.titles[news.titleSectionNum]}' title='${news.titles[news.titleDetailNum]}' >
+					</nt:conditional-include>													
+				</a>
+			  </nt:preview-image>
+                                <a href="<nt:link/>" style="color:#1A2042; font-weight:bold; text-decoration: none;"><nt:title/></a><br>
+                                <br>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </nt:news-list>
+            </table>
+            <hr>
+            <span class="titulo" style="background-color: #ff0000; font-weight: bold; font-size: 14px; line-height: 24px; color: #fff; margin-top: 15px; padding: 3px; padding-right: none;">
+            CULTURA
+            </span>
+            <br>
+            <br>
+            <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
+            <nt:news-list section="news" category="culture" size="3" page="1" zone="normal" onmainpage="section" >
+                <td class="force-col" style="padding-right: 20px;" valign="top">
+
+                    <!-- ### COLUMNA 3 ### -->
+                    
+                    <table border="0" cellspacing="0" cellpadding="0" width="175" align="right" class="col-3" id="last-col-3">
+                        <tr>
+                            <td align="left" valign="top" style="font-size:14px; line-height: 20px; font-family: Arial, sans-serif;">
+                          <nt:preview-image>												
+				<a href="<nt:link/>" class="her">
+					<c:set var="imageDescription" scope="page"><nt:image-description/></c:set>
+					<nt:conditional-include oncondition="${imageDescription != ''}">
+						<meta itemprop="description" content='<nt:image-description/>'>	
+						<img itemprop="contentURL" src="<nt:image-path width="175" height="130" scaletype='2'/>" class="col-3-img" width="175" height="130" alt='<nt:image-description/>' title='<nt:image-description/>' >
+					</nt:conditional-include>
+					<nt:conditional-include oncondition="${imageDescription == ''}">
+						<meta itemprop="description" content='${news.titles[news.titleSectionNum]}'>	
+						<img itemprop="contentURL" src="<nt:image-path width="175" height="130" scaletype='2'/>" class="col-3-img" width="175" height="130" alt='${news.titles[news.titleSectionNum]}' title='${news.titles[news.titleDetailNum]}' >
+					</nt:conditional-include>													
+				</a>
+			  </nt:preview-image>
+                                <a href="<nt:link/>" style="color:#1A2042; font-weight:bold; text-decoration: none;"><nt:title/></a><br>
+                                <br>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </nt:news-list>
+            </table>
+            <hr>
+            <span class="titulo" style="background-color: #ff0000; font-weight: bold; font-size: 14px; line-height: 24px; color: #fff; margin-top: 15px; padding: 3px; padding-right: none;">
+            BLOGS
+            </span>
+            <br>
+            <br>
+            <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
+            <nt:news-list section="blog" size="3" page="1" zone="normal" onmainpage="section" >
+                <td class="force-col" style="padding-right: 20px;" valign="top">
+
+                    <!-- ### COLUMNA 3 ### -->
+                    
+                    <table border="0" cellspacing="0" cellpadding="0" width="175" align="right" class="col-3" id="last-col-3">
+                        <tr>
+                            <td align="left" valign="top" style="font-size:14px; line-height: 20px; font-family: Arial, sans-serif;">
+                           <nt:preview-image>												
+				<a href="<nt:link/>" class="her">
+					<c:set var="imageDescription" scope="page"><nt:image-description/></c:set>
+					<nt:conditional-include oncondition="${imageDescription != ''}">
+						<meta itemprop="description" content='<nt:image-description/>'>	
+						<img itemprop="contentURL" src="<nt:image-path width="175" height="130" scaletype='2'/>" class="col-3-img" width="175" height="130" alt='<nt:image-description/>' title='<nt:image-description/>' >
+					</nt:conditional-include>
+					<nt:conditional-include oncondition="${imageDescription == ''}">
+						<meta itemprop="description" content='${news.titles[news.titleSectionNum]}'>	
+						<img itemprop="contentURL" src="<nt:image-path width="175" height="130" scaletype='2'/>" class="col-3-img" width="175" height="130" alt='${news.titles[news.titleSectionNum]}' title='${news.titles[news.titleDetailNum]}' >
+					</nt:conditional-include>													
+				</a>
+			  </nt:preview-image>
+                                <a href="<nt:link/>" style="color:#1A2042; font-weight:bold; text-decoration: none;"><nt:title/></a><br>
+                                <br>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </nt:news-list>
+            </table>
+            <hr>
+            <span class="titulo" style="background-color: #ff0000; font-weight: bold; font-size: 14px; line-height: 24px; color: #fff; margin-top: 15px; padding: 3px; padding-right: none;">
+            OPINI&Oacute;N
+            </span>
+            <br>
+            <br>
+            <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
+            <nt:news-list section="opinion" size="3" page="1" zone="normal" onmainpage="section" >
+                <td class="force-col" style="padding-right: 20px;" valign="top">
+
+                    <!-- ### COLUMNA 3 ### -->
+                    
+                    <table border="0" cellspacing="0" cellpadding="0" width="175" align="right" class="col-3" id="last-col-3">
+                        <tr>
+                            <td align="left" valign="top" style="font-size:14px; line-height: 20px; font-family: Arial, sans-serif;">
+                           <nt:preview-image>												
+				<a href="<nt:link/>" class="her">
+					<c:set var="imageDescription" scope="page"><nt:image-description/></c:set>
+					<nt:conditional-include oncondition="${imageDescription != ''}">
+						<meta itemprop="description" content='<nt:image-description/>'>	
+						<img itemprop="contentURL" src="<nt:image-path width="175" height="130" scaletype='2'/>" class="col-3-img" width="175" height="130" alt='<nt:image-description/>' title='<nt:image-description/>' >
+					</nt:conditional-include>
+					<nt:conditional-include oncondition="${imageDescription == ''}">
+						<meta itemprop="description" content='${news.titles[news.titleSectionNum]}'>	
+						<img itemprop="contentURL" src="<nt:image-path width="175" height="130" scaletype='2'/>" class="col-3-img" width="175" height="130" alt='${news.titles[news.titleSectionNum]}' title='${news.titles[news.titleDetailNum]}' >
+					</nt:conditional-include>													
+				</a>
+			  </nt:preview-image>
+                                <a href="<nt:link/>" style="color:#1A2042; font-weight:bold; text-decoration: none;"><nt:title/></a><br>
+                                <br>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </nt:news-list>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td class="container-padding" bgcolor="#ffffff" style="background-color: #d7d7d7; padding-left: 30px; padding-right: 30px; font-size: 14px; line-height: 20px; font-family: Helvetica, sans-serif; color: #333;" align="left">
+        <br>
+            <div style="border-top: 1px solid #fff; font-weight: bold;" align="center" color="#fff">
+                <br>
+                TeleSUR La Nueva Televisi&oacute;n del Sur C.A. (TVSUR) RIF: G-20004500-0
+            </div>
+            <br>
+            <div align="center">
+            <a href="http://facebook.com/teleSUR"><img src="http://telesurtv.net/arte/icn-facebook.gif" width="28" height="28" align="center" class="social"></a>
+            <a href="http://twitter.com/teleSURtv"><img src="http://telesurtv.net/arte/icn-twitter.gif" width="28" height="28" align="center" class="social"></a>
+            <a href="https://plus.google.com/118206615613074383260/posts"><img src="http://telesurtv.net/arte/icn-googleplus.gif" width="28" height="28" align="center" class="social"></a>
+            <a href="http://instagram.com/telesurtv"><img src="http://telesurtv.net/arte/icn-instagram.gif" width="28" height="28" align="center" class="social"></a>
+            <a href="http://www.pinterest.com/telesurtv/"><img src="http://telesurtv.net/arte/icn-pinterest.gif" width="28" height="28" align="center" class="social"></a>
+            <a href="https://www.youtube.com/user/telesurtv"><img src="http://telesurtv.net/arte/icn-youtube.gif" width="28" height="28" align="center" class="social"></a>
+            </div>
+            <!-- ### END CONTENT ### -->
+            <br>
+          </td>
+        </tr>
+      </table>
+      <!--/600px container -->
+    </td>
+  </tr>
+</table>
+<!--/100% wrapper-->
+<br>
+</body>
+</html>

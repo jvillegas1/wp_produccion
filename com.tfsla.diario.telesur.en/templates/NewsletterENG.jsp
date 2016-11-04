@@ -1,0 +1,206 @@
+<%@ include file="../elements/TS_Common_Libraries.jsp" %>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Calendar"%>
+<%@page import="java.util.Date"%>
+
+
+<%
+Date dNow = new Date();
+SimpleDateFormat ft = 
+new SimpleDateFormat ("dd/MM/yyyy");
+String currentDate = ft.format(dNow);
+%>
+
+<table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" bgcolor="#ebebeb" style="padding-top:15px">
+    <tr>
+        <td align="center" valign="top" bgcolor="#ebebeb" style="background-color: #ebebeb;">
+            <table border="0" width="600" cellpadding="0" cellspacing="0" class="container" bgcolor="#ffffff">
+                <tr>
+                    <td align="left" bgcolor="#ffffff" class="container-padding" style="background-color: #ffffff;padding-left: 30px;padding-right: 30px;font-size: 13px;line-height: 20px;font-family: Helvetica, sans-serif;color: #333"><br>
+                        <img src="http://www.telesurtv.net/arte/CabeceraNewsLetter.jpg"><br>
+                        &nbsp;
+                        <div>
+                            <span style="font-weight: bold;font-size: 18px;line-height: 5px;color: #D03C0F; margin: auto;margin-top:15px;"> <%=currentDate%> </span> 
+                            <a href="https://www.youtube.com/user/telesurtv"><img src="http://www.telesurtv.net/arte/icn-youtube.gif" width="24" height="24" align="right" class="social"></a>
+                            <a href="http://www.pinterest.com/telesurtv/"><img src="http://www.telesurtv.net/arte/icn-pinterest.gif" width="24" height="24" align="right" class="social"></a>
+                            <a href="http://instagram.com/telesurtv"><img src="http://www.telesurtv.net/arte/icn-instagram.gif" width="24" height="24" align="right" class="social"></a>
+                            <a href="https://plus.google.com/118206615613074383260/posts"><img src="http://www.telesurtv.net/arte/icn-googleplus.gif" width="24" height="24" align="right" class="social"></a>
+                            <a href="http://twitter.com/teleSURenglish"><img src="http://www.telesurtv.net/arte/icn-twitter.gif" width="24" height="24" align="right" class="social"></a>
+                            <a href="http://facebook.com/teleSURenglish"><img src="http://www.telesurtv.net/arte/icn-facebook.gif" width="24" height="24" align="right" class="social"></a>
+                        </div>
+                        <hr>
+                        <span class="titulo" style="background-color: #ff0000;font-weight: bold;font-size: 14px;line-height: 24px;color: #fff;margin-top: 15px;padding: 3px;padding-right: none"> LATIN AMERICA </span><br>
+                        &nbsp;
+                        <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
+                            <tr>
+                            <nt:news-list order="modification-date" advancedfilter="category:/system/categories/SubSecciones/en/news/latinaamerica/ AND category:/system/categories/SubSecciones/en/newsletter/"  size="3" publication="9" >
+                                <td class="force-col" style="padding-right: 20px;" valign="top">
+                                    <table border="0" cellspacing="0" cellpadding="0" width="175" align="right" class="col-3" id="last-col-3">
+                                        <tr>
+                                            <td align="left" valign="top" style="font-size:14px; line-height: 20px; font-family: Arial, sans-serif;">
+                                        <nt:preview-image>												
+                                            <a href="http://www.telesurtv.net<nt:link/>" class="her">
+                                                <c:set var="imageDescription" scope="page"><nt:image-description/></c:set>
+                                                <nt:conditional-include oncondition="${imageDescription != ''}">
+                                                    <img itemprop="contentURL" src="http://www.telesurtv.net<nt:image-path width='175' height='130' scaletype='2'/>" class="col-3-img" width='175' height='130' alt='<nt:image-description/>' title='<nt:image-description/>' >
+                                                </nt:conditional-include>
+                                                <nt:conditional-include oncondition="${imageDescription == ''}">
+
+                                                    <img itemprop="contentURL" src="http://www.telesurtv.net<nt:image-path width='175' height='130' scaletype='2'/>" class="col-3-img" width='175' height='130'alt='${news.titles[news.titleSectionNum]}' title='${news.titles[news.titleDetailNum]}' >
+                                                </nt:conditional-include>													
+                                            </a>
+                                        </nt:preview-image>
+                                        <a href="http://www.telesurtv.net<nt:link/>" style="color:#1A2042; font-weight:bold; text-decoration:none !important; text-decoration:none;"><span style="color:#000000; text-decoration:none !important; text-decoration:none;"><strong><nt:title/></strong></span></a><br>&nbsp;
+                                        </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </nt:news-list>
+                </tr>
+            </table>
+            <hr>
+            <span class="titulo" style="background-color: #ff0000;font-weight: bold;font-size: 14px;line-height: 24px;color: #fff;margin-top: 15px;padding: 3px;padding-right: none"> WORLD</span><br>
+            &nbsp;
+            <table border="0" cellpadding="0" cellspacing="0" class="columns-container">
+                <tr>
+                <nt:news-list advancedfilter="category:/system/categories/SubSecciones/news/world/ AND category:/system/categories/SubSecciones/en/newsletter/" order="modification-date" size="3" publication="9" >
+                    <td class="force-col" style="padding-right: 20px;" valign="top">
+                        <table border="0" cellspacing="0" cellpadding="0" width="175" align="right" class="col-3" id="last-col-3">
+                            <tr>
+                                <td align="left" valign="top" style="font-size:14px; line-height: 20px; font-family: Arial, sans-serif;">
+                            <nt:preview-image>												
+                                <a href="http://www.telesurtv.net<nt:link/>" class="her">
+                                    <c:set var="imageDescription" scope="page"><nt:image-description/></c:set>
+                                    <nt:conditional-include oncondition="${imageDescription != ''}">
+
+                                        <img itemprop="contentURL" src="http://www.telesurtv.net<nt:image-path width='175' height='130' scaletype='2'/>" class="col-3-img" width='175' height='130' alt='<nt:image-description/>' title='<nt:image-description/>' >
+                                    </nt:conditional-include>
+                                    <nt:conditional-include oncondition="${imageDescription == ''}">
+
+                                        <img itemprop="contentURL" src="http://www.telesurtv.net<nt:image-path width='175' height='130' scaletype='2'/>" class="col-3-img" width='175' height='130'alt='${news.titles[news.titleSectionNum]}' title='${news.titles[news.titleDetailNum]}' >
+                                    </nt:conditional-include>													
+                                </a>
+                            </nt:preview-image>
+                            <a href="http://www.telesurtv.net<nt:link/>" style="color:#1A2042; font-weight:bold; text-decoration:none !important; text-decoration:none;"><span style="color:#000000; text-decoration:none !important; text-decoration:none;"><strong><nt:title/></strong></span></a><br>&nbsp;
+                            </td>
+                            </tr>
+                        </table>
+                    </td>
+                </nt:news-list>
+    </tr>
+</table>
+<hr>
+<span class="titulo" style="background-color: #ff0000;font-weight: bold;font-size: 14px;line-height: 24px;color: #fff;margin-top: 15px;padding: 3px;padding-right: none"> SPORTS </span><br>
+&nbsp;
+<table border="0" cellpadding="0" cellspacing="0" class="columns-container">
+    <tr>
+    <nt:news-list advancedfilter="category:/system/categories/SubSecciones/news/sport/ AND category:/system/categories/SubSecciones/en/newsletter/" order="modification-date" size="3" publication="9">
+        <td class="force-col" style="padding-right: 20px;" valign="top">
+            <table border="0" cellspacing="0" cellpadding="0" width="175" align="right" class="col-3" id="last-col-3">
+                <tr>
+                    <td align="left" valign="top" style="font-size:14px; line-height: 20px; font-family: Arial, sans-serif;">
+                <nt:preview-image>												
+                    <a href="http://www.telesurtv.net<nt:link/>" class="her">
+                        <c:set var="imageDescription" scope="page"><nt:image-description/></c:set>
+                        <nt:conditional-include oncondition="${imageDescription != ''}">
+
+                            <img itemprop="contentURL" src="http://www.telesurtv.net<nt:image-path width='175' height='130' scaletype='2'/>" class="col-3-img" width='175' height='130' alt='<nt:image-description/>' title='<nt:image-description/>' >
+                        </nt:conditional-include>
+                        <nt:conditional-include oncondition="${imageDescription == ''}">
+
+                            <img itemprop="contentURL" src="http://www.telesurtv.net<nt:image-path width='175' height='130' scaletype='2'/>" class="col-3-img" width='175' height='130'alt='${news.titles[news.titleSectionNum]}' title='${news.titles[news.titleDetailNum]}' >
+                        </nt:conditional-include>													
+                    </a>
+                </nt:preview-image>
+                <a href="http://www.telesurtv.net<nt:link/>" style="color:#1A2042; font-weight:bold; text-decoration:none !important; text-decoration:none;"><span style="color:#000000; text-decoration:none !important; text-decoration:none;"><strong><nt:title/></strong></span></a><br>&nbsp;
+
+                </td>
+                </tr>
+            </table>
+        </td>
+    </nt:news-list>
+</tr>
+</table>
+<hr>
+<span class="titulo" style="background-color: #ff0000;font-weight: bold;font-size: 14px;line-height: 24px;color: #fff;margin-top: 15px;padding: 3px;padding-right: none"> CULTURE </span><br>
+&nbsp;
+<table border="0" cellpadding="0" cellspacing="0" class="columns-container">
+    <tr>
+    <nt:news-list advancedfilter="category:/system/categories/SubSecciones/news/culture/ AND category:/system/categories/SubSecciones/en/newsletter/" order="modification-date" size="3" publication="9">
+        <td class="force-col" style="padding-right: 20px;" valign="top">
+            <table border="0" cellspacing="0" cellpadding="0" width="175" align="right" class="col-3" id="last-col-3">
+                <tr>
+                    <td align="left" valign="top" style="font-size:14px; line-height: 20px; font-family: Arial, sans-serif;">
+                <nt:preview-image>												
+                    <a href="http://www.telesurtv.net<nt:link/>" class="her">
+                        <c:set var="imageDescription" scope="page"><nt:image-description/></c:set>
+                        <nt:conditional-include oncondition="${imageDescription != ''}">
+
+                            <img itemprop="contentURL" src="http://www.telesurtv.net<nt:image-path width='175' height='130' scaletype='2'/>" class="col-3-img" width='175' height='130' alt='<nt:image-description/>' title='<nt:image-description/>' >
+                        </nt:conditional-include>
+                        <nt:conditional-include oncondition="${imageDescription == ''}">
+
+                            <img itemprop="contentURL" src="http://www.telesurtv.net<nt:image-path width='175' height='130' scaletype='2'/>" class="col-3-img" width='175' height='130'alt='${news.titles[news.titleSectionNum]}' title='${news.titles[news.titleDetailNum]}' >
+                        </nt:conditional-include>													
+                    </a>
+                </nt:preview-image>
+                <a href="http://www.telesurtv.net<nt:link/>" style="color:#1A2042; font-weight:bold; text-decoration:none !important; text-decoration:none;"><span style="color:#000000; text-decoration:none !important; text-decoration:none;"><strong><nt:title/></strong></span></a><br>&nbsp;
+
+                </td>
+                </tr>
+            </table>
+        </td>
+    </nt:news-list>
+</tr>
+</table>
+<hr>
+
+<span class="titulo" style="background-color: #ff0000;font-weight: bold;font-size: 14px;line-height: 24px;color: #fff;margin-top: 15px;padding: 3px;padding-right: none"> OPINION</span><br>
+&nbsp;
+<table border="0" cellpadding="0" cellspacing="0" class="columns-container">
+    <tr>
+    <nt:news-list advancedfilter="seccion:opinion AND category:/system/categories/SubSecciones/en/newsletter/"  size="3" order="modification-date" publication="9">			               
+        <td class="force-col" style="padding-right: 20px;" valign="top">                    
+            <table border="0" cellspacing="0" cellpadding="0" width="175" align="right" class="col-3" id="last-col-3">
+                <tr>
+                    <td align="left" valign="top" style="font-size:14px; line-height: 20px; font-family: Arial, sans-serif;">
+                <nt:preview-image>												
+                    <a href="http://www.telesurtv.net<nt:link/>" class="her">
+                        <c:set var="imageDescription" scope="page"><nt:image-description/></c:set>
+                        <nt:conditional-include oncondition="${imageDescription != ''}">
+
+                            <img itemprop="contentURL" src="http://www.telesurtv.net<nt:image-path width='175' height='130' scaletype='2'/>" class="col-3-img" width='175' height='130' alt='<nt:image-description/>' title='<nt:image-description/>' >
+                        </nt:conditional-include>
+                        <nt:conditional-include oncondition="${imageDescription == ''}">
+
+                            <img itemprop="contentURL" src="http://www.telesurtv.net<nt:image-path width='175' height='130' scaletype='2'/>" class="col-3-img" width='175' height='130'alt='${news.titles[news.titleSectionNum]}' title='${news.titles[news.titleDetailNum]}' >
+                        </nt:conditional-include>													
+                    </a>
+                </nt:preview-image>
+                <a href="http://www.telesurtv.net<nt:link/>" style="color:#1A2042; font-weight:bold; text-decoration:none !important; text-decoration:none;"><span style="color:#000000; text-decoration:none !important; text-decoration:none;"><strong><nt:title/></strong></span></a><br>&nbsp;
+
+                </td>
+                </tr>
+            </table>
+        </td>
+    </nt:news-list>
+</tr>
+</table>
+
+<tr>
+    <td align="left" bgcolor="#ffffff" class="container-padding" style="background-color: #d7d7d7;padding-left: 30px;padding-right: 30px;font-size: 14px;line-height: 20px;font-family: Helvetica, sans-serif;color: #333"><br>&nbsp;
+        <div align="center" style="border-top: 1px solid #fff;font-weight: bold"><br>
+            TeleSUR La Nueva Televisi&oacute;n del Sur C.A. (TVSUR) RIF: G-20004500-0</div>
+        &nbsp;
+
+        <div align="center"><a href="http://facebook.com/teleSURenglish"><img src="http://www.telesurtv.net/arte/icn-facebook.gif" width="28" height="28" align="center" class="social"></a>
+            <a href="http://twitter.com/teleSURenglish"><img src="http://www.telesurtv.net/arte/icn-twitter.gif" width="28" height="28" align="center" class="social"></a>
+            <a href="https://plus.google.com/118206615613074383260/posts"><img src="http://www.telesurtv.net/arte/icn-googleplus.gif" width="28" height="28" align="center" class="social"></a>
+            <a href="http://instagram.com/telesurtv"><img src="http://www.telesurtv.net/arte/icn-instagram.gif" width="28" height="28" align="center" class="social"></a>
+            <a href="http://www.pinterest.com/telesurtv/"><img src="http://www.telesurtv.net/arte/icn-pinterest.gif" width="28" height="28" align="center" class="social"></a>
+            <a href="https://www.youtube.com/user/telesurtv"><img src="http://www.telesurtv.net/arte/icn-youtube.gif" width="28" height="28" align="center" class="social"></a></div>
+    </td></tr>
+</table>
+</td>
+</tr>
+</table>

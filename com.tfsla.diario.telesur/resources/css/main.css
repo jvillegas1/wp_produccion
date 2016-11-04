@@ -1,0 +1,635 @@
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .home-container .carousel-caption {
+        text-shadow:none;
+        top: 20%;
+        left: 15%;
+    }
+    .home-container .carousel-caption-wrapper {
+        width: 50%;
+    }
+}
+
+
+/*BOOSTRAP 5 COLUMNS*/
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+
+/*GENERAL*/
+html, body {
+    height: 100%;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #616161;
+}
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+h1 {
+    font-size: 35px;
+    color: #FFF;
+    margin-bottom: 30px;
+}
+h2 {
+    font-size: 30px;
+    color: #5f5f5f;
+    margin-bottom: 30px;
+}
+h3 {
+    font-size: 18px;
+}
+h2 a {
+    color: inherit;
+}
+h2 a:hover {
+    color: inherit;
+}
+.container {
+    padding-bottom: 0px;
+}
+.breadcrumb {
+    background-color: transparent;
+    margin-bottom: 0px;
+}
+.breadcrumb .active a {
+    color: #999;
+}
+.section-header {
+    font-size: 27px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.invert {
+    color: #FFF !important;
+}
+
+.section-banner {
+    height: 170px;
+    background: none no-repeat scroll center center #179156;
+    padding-top: 40px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.section-banner h1 {
+    font-weight: bold;
+}
+
+.news-container {
+    background-color: #f2f2f2;
+}
+/* HEADER */
+
+#header {
+    padding-top: 0px;
+}
+.telesur-header {
+    float: right;
+    clear: both;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+#language-selector {
+    padding: 20px 20px 0 0;
+}
+#language-selector .language {
+    color: #3C5FA1;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*NAV BAR*/
+.navbar {
+    border: 0px none;
+    border-radius:0px;
+    margin-bottom: 0px;
+    clear: both;
+}
+.navbar-default {
+    background-color: #FFF;
+}
+.navbar-nav {
+    float: right;
+}
+.navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a {
+    color: #404443;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color:#F66A00;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color:#F66A00;
+    background-color: transparent;
+    font-weight: bold;
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 1030;
+    right: 0px;
+}
+
+.fixed .nav-wrapper{
+
+}
+
+/*FOOTER*/
+.footer-wrapper {
+    background-color: #005b2f;
+    color:#9cafd0;
+    padding:0px;
+    line-height: 48px;
+}
+
+
+/*VIDEO PLAYER*/
+.video-banner {
+    background-color: #111;
+    height: 560px;
+}
+#video-player {
+    background-color: #222;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 560px;
+    position: relative;
+    width: 100%;
+}
+#video-player .player {
+    height: 560px;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+#video-player .player .player-play {
+    background: url("img/play.png") no-repeat scroll 50% 50% transparent;
+    display: block;
+    height: 126px;
+    left: 50%;
+    margin-left: -63px;
+    margin-top: -63px;
+    position: absolute;
+    top: 50%;
+    width: 126px;
+}
+
+.elecciones-container #video-player {
+    min-height: 350px;
+}
+.elecciones-container #video-player .player {
+    height: 350px;
+}
+/*IMAGE SLOT*/
+.image-banner {
+    text-align: center;
+    overflow: hidden;
+    background-color: #222;
+}
+
+/*social bar*/
+#social-bar {
+    padding: 0px 0;
+    text-align: right;
+}
+
+#social-bar .social-link {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    margin-right: 25px;
+}
+.social-services {
+    padding: 15px 0 0; 
+}
+#social-bar .social-link .social-service {
+    display: none;
+}
+#social-bar .service-facebook{
+    background: url("img/facebook-social-bar.png") scroll no-repeat 0 0 transparent;
+}
+#social-bar .service-twitter{
+    background: url("img/twitter-social-bar.png") scroll no-repeat 0 0 transparent;
+}
+#social-bar .service-googleplus{
+    background: url("img/gplus-social-bar.png") scroll no-repeat 0 0 transparent;
+}
+#social-bar .service-comments{
+    background: url("img/comment-social-bar.png") scroll no-repeat 0 0 transparent;
+}
+
+/*sprite*/
+.sprite {
+    background-image: url("img/telesur-footer.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+.sprite-bolivia-footer {
+    width: 63px;
+    height: 48px;
+    background-position: 0px 0px;
+}
+
+.sprite-bolivia-logo-telesur { 
+    background-image: url("img/header-telesur-logo.jpg");
+    background-repeat: no-repeat;
+    display: block;  
+    width: 36px;
+    height: 43px;
+    background-position: 0px 0px;  
+    margin-right: 20px;
+}
+
+/* Banners */
+.banner {
+    height: 400px;
+    background: url("img/banner-bg.jpg") repeat-x scroll center transparent;
+    padding-top: 60px;
+    text-align: right;
+    position: relative;
+}
+.banner .border-left{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+}
+.banner .border-right{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: 0;
+}
+.banner .banner-map {
+    position: absolute;
+    z-index: 2;
+    top: -60px;
+    right: 60px;
+}
+.banner-metadata {
+    z-index: 3;
+}
+.banner .banner-content {
+    z-index: 10;
+    position: relative;
+}
+.banner h1 {
+    text-transform: uppercase;
+    color: #fff740;
+    font-size:60px;
+    font-weight: 400;
+    margin-top: 22px;
+    margin-bottom: 11px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.banner .elecciones {
+    text-transform: uppercase;
+    color: #f66a00;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    display: block;
+}
+.banner p {
+    color: #fdfaf1;
+    font-size:16px;
+    font-weight: 300;
+    margin-top: 11px;
+    margin-bottom: 30px;
+}
+.banner a {
+    padding: 14px 8px;
+    color: #fff740;
+    background-color: #149958;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Home layout */
+.block {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.lo-que-hay-block {
+    background:#fff740 none repeat scroll center;
+}
+.home-section h1,
+.home-section h2 {
+    text-align: right;
+}
+.home-section h3 {
+    font-weight: bold;
+}
+.home-section h3 a {
+    color: #005b2f;
+}
+.lo-que-hay-block .about-slot {
+    text-align: center;
+}
+.lo-que-hay-block h3 a {
+    color: #810414;
+}
+.lo-que-hay-block .about-slot ul,
+.lo-que-hay-block .about-slot ul a {
+    text-align: left;
+    color: #5F5F5F;
+}
+.destaque {
+    font-weight: bold;
+}
+
+/* Candidatos */
+.candidates .candidate-picture {
+    box-shadow: 10px 10px 0px -2px #d6d6d4;
+}
+.candidates .candidate {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 30px;
+}
+.candidates .btn {
+    background-color: #198f55;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Candidato */
+.candidate-section .vice {
+    padding-left: 20px;
+    border-left:2px solid #e5e5e5;
+}
+.candidate-section .body-title {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #d1e9dc;
+}
+.read-more,
+.read-more-close {
+    color: #129a52;
+    padding: 20px 0px;
+}
+
+/* Elecciones 2014*/
+
+.elecciones-2014 .cargo {
+    margin-bottom: 50px;
+}
+.elecciones-2014 .cargo h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+}
+.elecciones-2014 #video-player {
+    min-height: 380px;
+}
+.elecciones-2014 #video-player .player {
+    height: 380px;
+}
+.metadata-container {
+    margin-bottom: 30px;
+}
+
+.new-box .new-wrapper{
+    background-color: #ffffff;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.new-box img{
+    margin-bottom: 15px;
+    height: 204px;
+}
+
+.new-box small{
+    margin-bottom: 16px;
+}
+
+.new-box h4{
+    margin-bottom: 32px;
+}
+
+.new-metadata-wrapper {
+    padding: 15px 30px 15px 30px;
+    text-align: left;
+}
+.new-metadata-wrapper .relative-time {
+    font-size: 10px;
+    color: #999;
+}
+.new-metadata-wrapper .new-listing-header a {
+    color: #222;
+}
+.new-metadata-wrapper .new-listing-content {
+    color: #444;
+    font-size: 13px;
+}
+
+/* Como se vota */
+.section-block {
+    margin-bottom: 30px;
+}
+.img-tribunal {
+    margin-bottom: 40px;
+}
+.comosevota {
+
+}
+
+.comosevota .voto-items{
+    text-align: left;
+    font-size: 12px;
+    list-style-image: url("img/check.gif");
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    margin: 30px 0px;
+}
+.comosevota .voto-items ul li{
+    margin-bottom: 30px;
+}
+.comosevota .comosevota-box{
+    border: 1px solid #616161;
+    padding: 30px;
+}
+
+
+.sobrebolivia h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #616161;
+    font-weight: 800;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+.sobrebolivia h3{
+    text-align: center;
+    text-transform: uppercase;
+    color: #3c5ea5;
+    font-weight: 800;
+    font-size: 24px;
+}
+.sobrebolivia a{
+    color: #656565;
+}
+.sobrebolivia img {
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+
+
+.infografia {
+    position: relative;
+    background-color: #FFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+    outline: 0px none;
+    padding: 10px;
+}
+.infografia .img-responsive {
+    margin: 0px auto;
+}
+
+/* News */
+.news-container {
+    color: #444444;
+}
+.news-container .description {
+    font-size: 17px;
+    padding-bottom: 30px;
+    text-align: center; 
+}
+
+.quote-element {
+    background-color: #fef957;
+    color: #21ad4d;
+    border-bottom: 4px solid #e5e5e5;
+    padding: 15px 15px 15px 45px;
+    font-style: italic;
+    font-size: 15px;
+}
+.friendly-options .candidato-opt img {
+    border: 3px solid #FFF;
+}
+.friendly-options .candidato-opt:hover img,
+.friendly-options .candidato-opt .selected {
+    cursor: pointer;
+    border: 3px solid #21AD4C;
+}
+.friendly-options .resultado {
+    font-size: 15px;
+    font-weight: bold;
+}
+.options {
+    display: none;
+}
+
+
+/* RESULTADOS */
+.gallery-block {
+    background-color: #222;
+    padding: 10px 30px 30px 30px;
+}
+.gallery-block .media-principal .thumb-container {
+    max-height: 400px;
+}
+.gallery-block .listing-element {
+    text-align: left;
+}
+.gallery-block .listing-element .media-heading {
+    clear: both;
+}
+
+.news-block {
+    background-color: #f1f2f7;
+    margin-top: 30px;
+}
+
+
+.thumb-container {
+    overflow: hidden;
+}
+.thumb-container img {
+    width: 100%;
+    height: auto;
+}
+.holder {
+    position: relative;
+    text-align: left;
+}
+.holder .play {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.holder .glyphicon {
+    bottom: 10px;
+    color: #FFF;
+    font-size: 30px;
+    left: 10px;
+    position: absolute;
+    top: auto;
+    padding: 4px;
+    text-shadow: 1px 1px 1px #333;
+}
+
+
+#votos-iframe {
+    width: 100%;
+    height: 450px;
+}
+
+/* Bolivia en movimiento */
+.bolivia_en_movimiento .section-banner {
+    margin-bottom: 0px;
+}
+.bolivia_en_movimiento .news-container {
+    padding-top: 30px;
+}
+.bolivia_en_movimiento .new-box img {
+}

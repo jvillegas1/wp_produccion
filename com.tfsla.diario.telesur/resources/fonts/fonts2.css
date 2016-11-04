@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'helveticaNormal';
+    src: url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneueltstd-lt-webfont.eot');
+    src: url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneueltstd-lt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneueltstd-lt-webfont.woff') format('woff'),
+         url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneueltstd-lt-webfont.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'helveticaBold';
+    src: url('HNB.eot');
+    src: url('HNB.eot?#iefix') format('embedded-opentype'),
+         url('HNB.woff') format('woff'),
+         url('HNB.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'helveticaMedium';
+    src: url('HNL.eot');
+    src: url('HNL.eot?#iefix') format('embedded-opentype'),
+         url('HNL.woff') format('woff'),
+         url('HNL.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}

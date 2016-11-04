@@ -1,0 +1,21 @@
+
+
+
+		/**estados de cielo - iconos 32px*/
+		.Helada32{background-image:url('/arte/clima/img/Helada-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Soleado32{background-image:url('/arte/clima/img/Despejado-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Huracan32{background-image:url('/arte/clima/img/huracan-32x32.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Llovizna32{background-image:url('/arte/clima/img/Llovizna-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Lluvia32{background-image:url('/arte/clima/img/Lluvia-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Luna32{background-image:url('/arte/clima/img/Luna-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Lluvianoche32{background-image:url('/arte/clima/img/Lluvia-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Nieve32{background-image:url('/arte/clima/img/Nieve-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Nublado32{background-image:url('/arte/clima/img/Nublado-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Nubladonoche32{background-image:url('/arte/clima/img/Nublado-noche-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.ParcialNublado32{background-image:url('/arte/clima/img/ParcialNublado-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Sindatos32{background-image:url('/arte/clima/img/SinDatos-21px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Polvo32{background-image:url('/arte/clima/img/Polvo-32px.png');background-repeat: no-repeat;width: 150px;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Tormenta32{background-image:url('/arte/clima/img/Tormenta-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Tornado32{background-image:url('/arte/clima/img/Tornado-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Ventoso32{background-image:url('/arte/clima/img/Ventoso-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}
+		.Ventosonoche32{background-image:url('/arte/clima/img/Ventoso-32px.png');background-repeat: no-repeat;background-position: 0px center;height: 23px;    margin: 0 !important;}

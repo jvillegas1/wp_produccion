@@ -1,0 +1,52 @@
+{
+    "Amanecer": "6:01 am",
+    "Visibilidad": "9.99 km",
+    "Pais": "Venezuela",
+    "Humedad": "48%",
+    "Previsiones": "\n<img src=\"http://l.yimg.com/a/i/us/we/52/30.gif\"/><br />\n<b>Current Conditions:</b><br />\nPartly Cloudy, 30 C<BR />\n<BR /><b>Forecast:</b><BR />\nSat - Thunderstorms. High: 26 Low: 7<br />\nSun - PM Thunderstorms. High: 27 Low: 7<br />\nMon - PM Thunderstorms. High: 28 Low: 8<br />\nTue - PM Showers. High: 27 Low: 9<br />\nWed - PM Thunderstorms. High: 27 Low: 9<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Merida__VE/*http://weather.yahoo.com/forecast/VEXX0022_c.html\">Full Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)<br/>\n",
+    "Presion": "1015.92 hPa",
+    "Ultima Actualizacion": "Sat, 26 Sep 2015 2:29 pm AST",
+    "Temperatura": "30",
+    "Velocidad": "14.48km/h",
+    "Direccion Vientos": "360",
+    "Ciudad": "Merida",
+    "pronostico": [
+        {
+            "day": "Sat",
+            "date": "26 Sep 2015",
+            "low": "7",
+            "high": "26",
+            "text": "Thunderstorms"
+        },
+        {
+            "day": "Sun",
+            "date": "27 Sep 2015",
+            "low": "7",
+            "high": "27",
+            "text": "PM Thunderstorms"
+        },
+        {
+            "day": "Mon",
+            "date": "28 Sep 2015",
+            "low": "8",
+            "high": "28",
+            "text": "PM Thunderstorms"
+        },
+        {
+            "day": "Tue",
+            "date": "29 Sep 2015",
+            "low": "9",
+            "high": "27",
+            "text": "PM Showers"
+        },
+        {
+            "day": "Wed",
+            "date": "30 Sep 2015",
+            "low": "9",
+            "high": "27",
+            "text": "PM Thunderstorms"
+        }
+    ],
+    "Tiempo": "Sleet",
+    "Atardecer": "6:06 pm"
+}

@@ -1,0 +1,52 @@
+{
+    "Amanecer": "5:29 am",
+    "Visibilidad": "9.99 km",
+    "Pais": "Venezuela",
+    "Humedad": "30%",
+    "Previsiones": "\n<img src=\"http://l.yimg.com/a/i/us/we/52/30.gif\"/><br />\n<b>Current Conditions:</b><br />\nPartly Cloudy, 35 C<BR />\n<BR /><b>Forecast:</b><BR />\nSat - Partly Cloudy. High: 36 Low: 24<br />\nSun - Mostly Sunny. High: 37 Low: 24<br />\nMon - Mostly Sunny. High: 36 Low: 24<br />\nTue - Partly Cloudy. High: 36 Low: 26<br />\nWed - Partly Cloudy. High: 36 Low: 25<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Puerto_Ordaz_and_San_Felix__VE/*http://weather.yahoo.com/forecast/VEXX0035_c.html\">Full Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)<br/>\n",
+    "Presion": "982.05 hPa",
+    "Ultima Actualizacion": "Sat, 26 Sep 2015 2:29 pm AST",
+    "Temperatura": "35",
+    "Velocidad": "km/h",
+    "Direccion Vientos": "",
+    "Ciudad": "Puerto Ordaz and San Felix",
+    "pronostico": [
+        {
+            "day": "Sat",
+            "date": "26 Sep 2015",
+            "low": "24",
+            "high": "36",
+            "text": "Partly Cloudy"
+        },
+        {
+            "day": "Sun",
+            "date": "27 Sep 2015",
+            "low": "24",
+            "high": "37",
+            "text": "Mostly Sunny"
+        },
+        {
+            "day": "Mon",
+            "date": "28 Sep 2015",
+            "low": "24",
+            "high": "36",
+            "text": "Mostly Sunny"
+        },
+        {
+            "day": "Tue",
+            "date": "29 Sep 2015",
+            "low": "26",
+            "high": "36",
+            "text": "Partly Cloudy"
+        },
+        {
+            "day": "Wed",
+            "date": "30 Sep 2015",
+            "low": "25",
+            "high": "36",
+            "text": "Partly Cloudy"
+        }
+    ],
+    "Tiempo": "Partly Cloudy",
+    "Atardecer": "5:34 pm"
+}

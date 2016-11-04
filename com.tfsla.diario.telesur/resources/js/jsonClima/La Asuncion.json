@@ -1,0 +1,52 @@
+{
+    "Amanecer": "5:33 am",
+    "Visibilidad": "9.99 km",
+    "Pais": "Venezuela",
+    "Humedad": "44%",
+    "Previsiones": "\n<img src=\"http://l.yimg.com/a/i/us/we/52/30.gif\"/><br />\n<b>Current Conditions:</b><br />\nPartly Cloudy, 34 C<BR />\n<BR /><b>Forecast:</b><BR />\nSat - Sunny. High: 36 Low: 26<br />\nSun - Mostly Sunny. High: 36 Low: 26<br />\nMon - Partly Cloudy. High: 36 Low: 26<br />\nTue - Partly Cloudy. High: 36 Low: 26<br />\nWed - Partly Cloudy. High: 36 Low: 26<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/La_Asuncion__VE/*http://weather.yahoo.com/forecast/VEXX0023_c.html\">Full Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)<br/>\n",
+    "Presion": "982.05 hPa",
+    "Ultima Actualizacion": "Sat, 26 Sep 2015 12:29 pm AST",
+    "Temperatura": "34",
+    "Velocidad": "16.09km/h",
+    "Direccion Vientos": "50",
+    "Ciudad": "La Asuncion",
+    "pronostico": [
+        {
+            "day": "Sat",
+            "date": "26 Sep 2015",
+            "low": "26",
+            "high": "36",
+            "text": "Sunny"
+        },
+        {
+            "day": "Sun",
+            "date": "27 Sep 2015",
+            "low": "26",
+            "high": "36",
+            "text": "Sunny"
+        },
+        {
+            "day": "Mon",
+            "date": "28 Sep 2015",
+            "low": "26",
+            "high": "36",
+            "text": "Partly Cloudy"
+        },
+        {
+            "day": "Tue",
+            "date": "29 Sep 2015",
+            "low": "26",
+            "high": "36",
+            "text": "Partly Cloudy"
+        },
+        {
+            "day": "Wed",
+            "date": "30 Sep 2015",
+            "low": "26",
+            "high": "36",
+            "text": "Partly Cloudy"
+        }
+    ],
+    "Tiempo": "Partly Cloudy",
+    "Atardecer": "5:39 pm"
+}

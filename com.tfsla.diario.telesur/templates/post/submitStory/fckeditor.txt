@@ -1,0 +1,40 @@
+FCKConfig.AutoDetectLanguage = false;
+FCKConfig.DefaultLanguage = "en";
+
+FCKConfig.CustomStyles = {};
+
+FCKConfig.ProcessHTMLEntities = true;
+FCKConfig.ProcessNumericEntities = false;
+FCKConfig.IncludeLatinEntities = false;
+FCKConfig.IncludeGreekEntities = false;
+
+FCKConfig.ToolbarCanCollapse = true;
+FCKConfig.ToolbarStartExpanded	= false;
+
+FCKConfig.ToolbarSets["Default"] = [
+        ['Undo','Redo','-','SelectAll','RemoveFormat','-','Cut','Copy','Paste','PasteText','PasteWord','-','Bold','Italic','Underline','StrikeThrough'],['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull','-'],['Unlink']
+];
+
+FCKConfig.Keystrokes = [
+	[ CTRL + 65 /*A*/, true ],
+	[ CTRL + 67 /*C*/, true ],
+	[ CTRL + 70 /*F*/, true ],
+	[ CTRL + 83 /*S*/, true ],
+	[ CTRL + 88 /*X*/, true ],
+	[ CTRL + 86 /*V*/, 'Paste' ],
+	[ SHIFT + 45 /*INS*/, 'Paste' ],
+	[ CTRL + 90 /*Z*/, 'Undo' ],
+	[ CTRL + 89 /*Y*/, 'Redo' ],
+	[ CTRL + SHIFT + 90 /*Z*/, 'Redo' ],
+	[ CTRL + 76 /*L*/, 'Link' ],
+	[ CTRL + 66 /*B*/, 'Bold' ],
+	[ CTRL + 73 /*I*/, 'Italic' ],
+	[ CTRL + 85 /*U*/, 'Underline' ],
+	[ CTRL + SHIFT + 83 /*S*/, true ],
+	[ CTRL + ALT + 13 /*ENTER*/, 'FitWindow' ],
+	[ CTRL + 9 /*TAB*/, 'Source' ]
+] ;
+
+FCKConfig.PreserveSessionOnFileBrowser = true;
+
+FCKConfig.ImageUpload = false;

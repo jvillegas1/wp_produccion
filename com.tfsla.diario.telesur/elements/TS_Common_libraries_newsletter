@@ -1,0 +1,12 @@
+
+<%@ taglib prefix="cms" uri="http://www.opencms.org/taglib/cms" %>
+<%@ taglib prefix="nt" uri="http://www.tfsla.com/taglib/tfsNewsTags" %>
+<%@ taglib prefix="tfs" uri="http://www.tfsla.com/taguero" %>
+<%@ taglib prefix="dt" uri="http://jakarta.apache.org/taglibs/datetime-1.0" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@ page import="org.opencms.jsp.CmsJspActionElement" %>
+<%@ page import="java.util.*" %>
+<%@ taglib prefix="tfsStat" uri="http://www.tfsla.com/taglib/tfsStatistics" %>
+<%@ page import="org.apache.commons.lang.*"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>

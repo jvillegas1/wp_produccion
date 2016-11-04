@@ -1,0 +1,52 @@
+{
+    "Amanecer": "5:48 am",
+    "Visibilidad": "9.99 km",
+    "Pais": "Venezuela",
+    "Humedad": "53%",
+    "Previsiones": "\n<img src=\"http://l.yimg.com/a/i/us/we/52/28.gif\"/><br />\n<b>Current Conditions:</b><br />\nMostly Cloudy, 35 C<BR />\n<BR /><b>Forecast:</b><BR />\nSat - Partly Cloudy. High: 34 Low: 23<br />\nSun - PM Thunderstorms. High: 36 Low: 24<br />\nMon - Mostly Sunny. High: 37 Low: 24<br />\nTue - Partly Cloudy. High: 37 Low: 23<br />\nWed - PM Thunderstorms. High: 36 Low: 24<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Valencia__VE/*http://weather.yahoo.com/forecast/VEXX0031_c.html\">Full Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)<br/>\n",
+    "Presion": "982.05 hPa",
+    "Ultima Actualizacion": "Sat, 26 Sep 2015 2:29 pm AST",
+    "Temperatura": "35",
+    "Velocidad": "16.09km/h",
+    "Direccion Vientos": "230",
+    "Ciudad": "Valencia",
+    "pronostico": [
+        {
+            "day": "Sat",
+            "date": "26 Sep 2015",
+            "low": "23",
+            "high": "34",
+            "text": "Partly Cloudy"
+        },
+        {
+            "day": "Sun",
+            "date": "27 Sep 2015",
+            "low": "24",
+            "high": "36",
+            "text": "PM Thunderstorms"
+        },
+        {
+            "day": "Mon",
+            "date": "28 Sep 2015",
+            "low": "24",
+            "high": "37",
+            "text": "Mostly Sunny"
+        },
+        {
+            "day": "Tue",
+            "date": "29 Sep 2015",
+            "low": "23",
+            "high": "37",
+            "text": "Partly Cloudy"
+        },
+        {
+            "day": "Wed",
+            "date": "30 Sep 2015",
+            "low": "24",
+            "high": "36",
+            "text": "PM Thunderstorms"
+        }
+    ],
+    "Tiempo": "Mostly Cloudy",
+    "Atardecer": "5:54 pm"
+}

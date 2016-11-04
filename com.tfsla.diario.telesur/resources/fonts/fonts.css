@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'helveticaNormal';
+    src: url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue.eot');
+    src: url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue.eot?#iefix') format('embedded-opentype'),
+		 url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue.woff') format('woff'),
+         url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'helveticaBold';
+    src: url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue-bold.eot');
+    src: url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue-bold.eot?#iefix') format('embedded-opentype'),
+         url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue-bold.woff') format('woff'),
+         url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'helveticaMedium';
+    src: url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue-medium.eot');
+    src: url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue-medium.eot?#iefix') format('embedded-opentype'),
+         url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue-medium.woff') format('woff'),
+         url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue-medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'helveticaItalic';
+    src: url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue-italic.eot');
+    src: url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue-italic.eot?#iefix') format('embedded-opentype'),
+         url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue-italic.woff') format('woff'),
+         url('/system/modules/com.tfsla.diario.telesur/resources/fonts/helveticaneue-italic.ttf') format('truetype');
+    font-weight: italic;
+    font-style: normal;
+}

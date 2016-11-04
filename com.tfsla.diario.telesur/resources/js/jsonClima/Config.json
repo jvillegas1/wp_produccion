@@ -1,0 +1,105 @@
+[  
+    {  
+        "ciudad":"Caracas", 
+        "pais": "venezuela",
+        "url": "http://weather.yahooapis.com/forecastrss?w=395269&u=c",
+        "file": "caracas.json"
+    },
+   
+    {  
+        "ciudad":"Maracaibo", 
+        "pais": "venezuela",
+        "url": "http://weather.yahooapis.com/forecastrss?w=395270&u=c",
+        "file": "maracaibo.json"
+    },
+
+    {  
+        "ciudad":"Maracay",
+        "pais": "venezuela",
+        "url": "http://weather.yahooapis.com/forecastrss?w=395271&u=c",
+        "file": "maracay.json"
+    },
+
+    {  
+        "ciudad":"La Asuncion",
+        "pais": "venezuela",
+        "url": "http://weather.yahooapis.com/forecastrss?w=468476&u=c",
+        "file": "Asuncion.json"
+    },
+
+    {  
+        "ciudad":"Puerto Ordaz",
+        "pais": "venezuela",
+        "url": "http://weather.yahooapis.com/forecastrss?w=468399&u=c",
+        "file": "puerto_ordaz.json"
+    },
+
+    {  
+        "ciudad":"Puerto la Cruz",
+        "pais": "venezuela",
+        "url": "http://weather.yahooapis.com/forecastrss?w=468398&u=c",
+        "file": "Puerto_la_cruz.json"
+    },
+
+    {  
+        "ciudad":"San Cristobal",
+        "pais": "venezuela",
+        "url": "http://weather.yahooapis.com/forecastrss?w=468400&u=c",
+        "file": "san_cristobal.json"
+    },
+
+    {  
+        "ciudad":"Punto Fijo",
+        "pais": "venezuela",
+        "url": "http://weather.yahooapis.com/forecastrss?w=468428&u=c",
+        "file": "punto_fijo.json"
+    },
+
+    {  
+        "ciudad":"Barquisimeto",
+        "pais": "venezuela",
+        "url": "http://weather.yahooapis.com/forecastrss?w=468382&u=c",
+        "file": "barquisimeto.json"
+    },
+
+    {  
+        "ciudad":"Ciudad Bolivar",
+        "pais": "venezuela",
+        "url": "http://weather.yahooapis.com/forecastrss?w=468393&u=c",
+        "file": "ciuda_bolivar.json"
+    },
+
+    {  
+        "ciudad":"Maturin",
+        "pais": "venezuela",
+        "url": "http://weather.yahooapis.com/forecastrss?w=468384&u=c",
+        "file": "maturin.json"
+    },
+
+ {  
+        "ciudad":"Merida",
+        "pais": "venezuela",
+        "url": "http://weather.yahooapis.com/forecastrss?w=468385&u=c",
+        "file": "merida.json"
+    },
+
+    {  
+        "ciudad":"Barinas",
+        "pais": "venezuela",
+        "url": "http://weather.yahooapis.com/forecastrss?w=468389&u=c",
+        "file": "barinas.json"
+    },
+    
+    {
+        "ciudad":"Valencia",
+        "pais": "venezuela",
+        "url": "http://weather.yahooapis.com/forecastrss?w=395272&u=c",
+        "file": "valencia.json"
+    }
+
+]
+
+
+
+
+

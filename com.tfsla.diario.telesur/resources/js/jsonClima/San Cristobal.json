@@ -1,0 +1,52 @@
+{"Amanecer":"6:08 am","Visibilidad":"9.99 km","Pais":"Venezuela","Humedad":"44%","Previsiones":"\n<img src=\"http:\/\/l.yimg.com\/a\/i\/us\/we\/52\/30.gif\"\/><br \/>\n<b>Current Conditions:<\/b><br \/>\nPartly Cloudy, 35 C<BR \/>\n<BR \/><b>Forecast:<\/b><BR \/>\nSat - Partly Cloudy. High: 32 Low: 17<br \/>\nSun - Partly Cloudy. High: 33 Low: 17<br \/>\nMon - Partly Cloudy. High: 34 Low: 17<br \/>\nTue - Partly Cloudy. High: 34 Low: 17<br \/>\nWed - Partly Cloudy. High: 34 Low: 17<br \/>\n<br \/>\n<a href=\"http:\/\/us.rd.yahoo.com\/dailynews\/rss\/weather\/San_Cristobal__VE\/*http:\/\/weather.yahoo.com\/forecast\/VEXX0027_c.html\">Full Forecast at Yahoo! Weather<\/a><BR\/><BR\/>\n(provided by <a href=\"http:\/\/www.weather.com\" >The Weather Channel<\/a>)<br\/>\n","Presion":"982.05 hPa","Ultima Actualizacion":"Sat, 26 Sep 2015 1:29 pm AST","Temperatura":"35 C","Velocidad":"km\/h","Direccion Vientos":"","Ciudad":"San Cristobal","pronostico":[{"day":"Sat","date":"26 Sep 2015","low":"17","high":"32","text":"Partly Cloudy"},{"day":"Sun","date":"27 Sep 2015","low":"17","high":"33","text":"Partly Cloudy"},{"day":"Mon","date":"28 Sep 2015","low":"17","high":"34","text":"Partly Cloudy"},{"day":"Tue","date":"29 Sep 2015","low":"17","high":"34","text":"Partly Cloudy"},{"day":"Wed","date":"30 Sep 2015","low":"17","high":"34","text":"Partly Cloudy"}],"Tiempo":"Partly Cloudy","Atardecer":"6:11 pm"}{
+    "Amanecer": "6:08 am",
+    "Visibilidad": "9.99 km",
+    "Pais": "Venezuela",
+    "Humedad": "44%",
+    "Previsiones": "\n<img src=\"http://l.yimg.com/a/i/us/we/52/30.gif\"/><br />\n<b>Current Conditions:</b><br />\nPartly Cloudy, 35 C<BR />\n<BR /><b>Forecast:</b><BR />\nSat - Partly Cloudy. High: 32 Low: 17<br />\nSun - Partly Cloudy. High: 33 Low: 17<br />\nMon - Partly Cloudy. High: 34 Low: 17<br />\nTue - Partly Cloudy. High: 34 Low: 17<br />\nWed - Partly Cloudy. High: 34 Low: 17<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/San_Cristobal__VE/*http://weather.yahoo.com/forecast/VEXX0027_c.html\">Full Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)<br/>\n",
+    "Presion": "982.05 hPa",
+    "Ultima Actualizacion": "Sat, 26 Sep 2015 1:29 pm AST",
+    "Temperatura": "35",
+    "Velocidad": "km/h",
+    "Direccion Vientos": "",
+    "Ciudad": "San Cristobal",
+    "pronostico": [
+        {
+            "day": "Sat",
+            "date": "26 Sep 2015",
+            "low": "17",
+            "high": "32",
+            "text": "Partly Cloudy"
+        },
+        {
+            "day": "Sun",
+            "date": "27 Sep 2015",
+            "low": "17",
+            "high": "33",
+            "text": "Partly Cloudy"
+        },
+        {
+            "day": "Mon",
+            "date": "28 Sep 2015",
+            "low": "17",
+            "high": "34",
+            "text": "Partly Cloudy"
+        },
+        {
+            "day": "Tue",
+            "date": "29 Sep 2015",
+            "low": "17",
+            "high": "34",
+            "text": "Partly Cloudy"
+        },
+        {
+            "day": "Wed",
+            "date": "30 Sep 2015",
+            "low": "17",
+            "high": "34",
+            "text": "Partly Cloudy"
+        }
+    ],
+    "Tiempo": "Snow",
+    "Atardecer": "6:11 pm"
+}
