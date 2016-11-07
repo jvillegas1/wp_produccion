@@ -1,0 +1,183 @@
+<%@ taglib prefix="cms" uri="http://www.opencms.org/taglib/cms" %>
+<%@ page import="com.tfsla.diario.admin.jsp.*"%>
+
+<%
+TfsMessages message = new TfsMessages(pageContext,request,response);  
+%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<cms:include page="/system/modules/com.tfsla.diario.admin/elements/Admin_includelinks.jsp" />
+
+<script type="text/javascript">
+   var CKEDITOR = window.top.CKEDITOR || {};
+   
+   var editor = CKEDITOR.dialog.getCurrent().getParentEditor();
+   
+   var okListener = function(ev) {
+   
+	InsertFacebook();
+	
+        CKEDITOR.dialog.getCurrent().removeListener("ok", okListener);
+        
+  };
+  
+  CKEDITOR.event.implementOn(CKEDITOR.dialog.getCurrent());
+  CKEDITOR.dialog.getCurrent().on("ok", okListener);
+  
+  function InsertFacebook() {
+      
+      var editor = CKEDITOR.dialog.getCurrent().getParentEditor();
+      var  value;
+      var  width = 500;
+      
+      var wpatt = /\d+/;
+      var datawidth = wpatt.exec($("#Ck-fb-width").val());
+      
+       if(datawidth< 350 || datawidth>750){
+            alert("Error - Incorrect width");
+            return false;
+       }
+       
+       if ($.trim($("#urlFacebook").val()) != ""  ){
+       
+                var sdkJs = "(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = \"//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.3\";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));";
+       
+		var jsRegexp = /\<script>(.*)\<\/script>/g;
+		     jsmatch = jsRegexp.exec($("#urlFacebook").val());
+		    
+		    jsString = "";
+		     
+		     if( jsmatch !=null ){
+		       jsString = jsmatch[1];
+		      }
+		
+		// Al string ingresado le saco el contenido de script que es donde pueden meter codigo malicioso
+		var dataPost = $("#urlFacebook").val().replace(jsString, "");
+		
+		// En el String que queda reviso que tenga la url del post/video/page de fb 
+		if( dataPost !=null && dataPost !="")
+		{
+		    isHrefFb = false;
+		    var patt = /href="(.*?)"/g;
+		    
+		    while( match=patt.exec(dataPost)){
+		       
+		        if(validaURL(match[1]))
+		          isHrefFb = true;
+		    }
+		    
+		    if(isHrefFb){
+		    
+		    	alignTw = "text-align:left;";
+		    
+		         if( $('#alignFrmFb').val()=="center" )
+		              alignTw = "text-align:center";
+		         
+		         if( $('#alignFrmFb').val()=="right" )
+		              alignTw = "text-align:right;";
+		         
+		    
+		         fbvalue = $("#urlFacebook").val().replace(jsString, sdkJs);
+		         
+		         widthRegexp = /data-width="(.*?)"/g;
+		         fbvalue = fbvalue.replace(widthRegexp, "data-width=\""+datawidth+"\"");
+		         
+		            DivId = getDivId("fb-");
+		         
+		         value  = "<span></span><div style=\""+alignTw+"\">";     
+		         value += "<div class=\"ckeditor-fb\" id=\""+DivId+"\" style=\"display: inline-block;\">"; 
+		         value += fbvalue;
+		         value += "</div></div>";
+		         
+		    }else{
+		       alert("Error - Incorrect format");
+		       return false;
+		    }
+		    
+		}else{
+		    alert("Error - Incorrect format");
+		    return false;
+		}
+		
+        }
+
+	if ( editor.mode == 'wysiwyg' )
+	{
+	     editor.insertHtml( value );
+	}else{
+		alert( 'You must be in WYSIWYG mode!' );
+	}
+	
+	
+  }
+  
+  
+  function validaURL(url) {
+	regex = /^(https?:\/\/)?((w{3}\.)?)facebook.com\/(([a-z\d.]{5,})?)/;
+	return regex.test(url);
+  }
+  
+  $(document).ready(function(){ 
+      $('.chzn-select').chosen();  
+  });
+   
+  function getDivId(prefix){
+		  
+	ramdomId = Math.floor((Math.random() * 100) + 1);
+	 content = CKEDITOR.dialog.getCurrent().getParentEditor().getData();
+	   DivId = prefix+ramdomId;
+	       
+	if(content.indexOf(DivId)>-1)
+	{
+	    getDivId(prefix);
+        }else{
+	    return DivId;
+	}
+	       
+  }
+
+   
+</script>
+</head>
+<body id="ckeditor-popin-body">
+
+	<br>
+	<p><%=message.key("GUI_CKEDITOR_FACEBOOK_PASTE_STRING")%></p>
+
+	<textarea rows="4"   id="urlFacebook" name="urlFacebook" style="resize:none;width:95%;"></textarea>
+	<br>
+	
+	<form class="form-horizontal">
+           <fieldset>
+		<div class="span6" style="margin-left:-12px;" >
+		     <div class="control-group">
+			<label class="control-label" for="searchImagesText"><%=message.key("GUI_ALIGN")%>:</label>
+			<div class="controls">		                        	
+		              <select class="chzn-select" id="alignFrmFb" name="alignFrmFb">
+					<option value="center">Center</option>
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+		              </select>
+		         </div>
+		     </div>
+		     <div class="control-group">
+				<label class="control-label" for="filterByDate"><%=message.key("GUI_CKEDITOR_WIDTH")%>: </label>
+				<div class="controls">
+				       <input id="Ck-fb-width"  type="text" value="500" name="Ck-fb-width"></input> px 
+				       <br>
+				       (<%=message.key("GUI_CKEDITOR_WIDTH_MSG")%>)  
+				</div>
+		     </div> 
+		</div>
+           </fieldset>
+	</form>
+	
+<cms:include page="/system/modules/com.tfsla.diario.admin/elements/Admin_includescripts.jsp" />
+	
+</body>
+</html>
