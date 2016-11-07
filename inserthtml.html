@@ -1,0 +1,105 @@
+<%@ taglib prefix="cms" uri="http://www.opencms.org/taglib/cms" %>
+<%@ page import="com.tfsla.diario.admin.jsp.*"%>
+
+<%
+TfsMessages message = new TfsMessages(pageContext,request,response);  
+%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<cms:include page="/system/modules/com.tfsla.diario.admin/elements/Admin_includelinks.jsp" />
+
+<script type="text/javascript">
+   var CKEDITOR = window.top.CKEDITOR || {};
+   
+   var editor = CKEDITOR.dialog.getCurrent().getParentEditor();
+   
+ 
+   if( editor.getSelection().getSelectedElement()!=null){ 
+   
+          //  alert(editor.getSelection().getSelectedElement());
+    
+   }else{
+         //alert("No hay elementos seleccionados");
+   }
+  
+   var okListener = function(ev) {
+   
+	InsertHtml();
+	
+        CKEDITOR.dialog.getCurrent().removeListener("ok", okListener);
+        
+  };
+  
+  CKEDITOR.event.implementOn(CKEDITOR.dialog.getCurrent());
+  CKEDITOR.dialog.getCurrent().on("ok", okListener);
+  
+  function InsertHtml() {
+      
+      var editor = CKEDITOR.dialog.getCurrent().getParentEditor();
+      var  value = "";
+      
+       if ($.trim($("textarea").val()) != "") {
+             
+             alignEm = "text-align:left;";
+		    
+	     if( $('#alignFrmEm').val()=="center" )
+		         alignEm = "text-align:center";
+		         
+	     if( $('#alignFrmEm').val()=="right" )
+		         alignEm = "text-align:right;";
+             
+             value = "<span></span><div style=\""+alignEm+"\"><div class=\"ckeditor-em\">"+$("textarea").val()+"</div></div>";
+       }
+
+	// Check the active editing mode.
+	if ( editor.mode == 'wysiwyg' )
+	{
+		editor.insertHtml( value );
+	}else{
+	
+		alert( 'You must be in WYSIWYG mode!' );
+	}
+  }
+  
+  $(document).ready(function(){ 
+      $('.chzn-select').chosen();  
+  });
+
+   
+</script>
+</head>
+<body id="ckeditor-popin-body">
+
+	<br>
+	<%=message.key("GUI_CKEDITOR_HTML_PASTE_STRING")%>
+	<br><br>
+	<textarea rows="4"   id="HtmlCode" name="HtmlCode" style="resize:none;width:95%;"></textarea>
+	
+	<br>
+	
+	<form class="form-horizontal">
+           <fieldset>
+		<div class="span6" style="margin-left:-12px;" >
+		     <div class="control-group">
+			<label class="control-label" for="searchImagesText"><%=message.key("GUI_ALIGN")%>:</label>
+			<div class="controls">		                        	
+		              <select class="chzn-select" id="alignFrmEm" name="alignFrmEm">
+					<option value="center">Center</option>
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+		              </select>
+		         </div>
+		     </div>
+		</div>
+           </fieldset>
+	</form>
+	
+<cms:include page="/system/modules/com.tfsla.diario.admin/elements/Admin_includescripts.jsp" />	
+	
+</body>
+</html>

@@ -1,0 +1,160 @@
+<%@ taglib prefix="cms" uri="http://www.opencms.org/taglib/cms" %>
+<%@ page import="com.tfsla.diario.admin.jsp.*"%>
+
+<%
+TfsMessages message = new TfsMessages(pageContext,request,response);  
+%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<cms:include page="/system/modules/com.tfsla.diario.admin/elements/Admin_includelinks.jsp" />
+
+<script type="text/javascript">
+   var CKEDITOR = window.top.CKEDITOR || {};
+   
+   var editor = CKEDITOR.dialog.getCurrent().getParentEditor();
+   
+   var okListener = function(ev) {
+   
+	InsertTwitter();
+	
+        CKEDITOR.dialog.getCurrent().removeListener("ok", okListener);
+        
+  };
+  
+  CKEDITOR.event.implementOn(CKEDITOR.dialog.getCurrent());
+  CKEDITOR.dialog.getCurrent().on("ok", okListener);
+  
+  function InsertTwitter() {
+      
+      var editor = CKEDITOR.dialog.getCurrent().getParentEditor();
+      var  value;
+      
+     
+       if ($.trim($("#codeTweet").val()) != ""  ) {
+       	
+       	     // Me fijo que tengo el dominio de twitter
+       	      var patt = /href="(.*?)"/g;
+       	      isHrefTw = false;
+		    
+	  while( match=patt.exec($("#codeTweet").val())){
+		
+		href = match[1];    
+		       
+		if(validaURL(href)){
+		    isHrefTw = true;
+		}
+	  }
+	  
+	  if(isHrefTw){
+                
+            // Saco los iframes y los script del código
+            jsTagregex = /<script.*?>.*?<\/script>/g;
+            codeEmbedded = $("#codeTweet").val().replace(jsTagregex, "");
+            
+            iframeTagregex = /<iframe.*?>.*?<\/iframe>/g;
+            codeEmbedded = codeEmbedded.replace(iframeTagregex, "");
+            
+            alignTw = "text-align:left;";
+		    
+	    if( $('#alignFrmTw').val()=="center" )
+		   alignTw = "text-align:center";
+		         
+	   if( $('#alignFrmTw').val()=="right" )
+		   alignTw = "text-align:right;";
+		   
+	      DivId = getDivId("twitter-");
+	      
+	        // value = "<span></span><div style=\""+alignTw+"\">";
+	        value +="<p style=\""+alignTw+"\" id=\""+DivId+"\"><figure class=\"op-social\">"; 
+		    
+                value += codeEmbedded;
+                value += "<";
+                value += "script async src=\"//platform.twitter.com/widgets.js\" charset=\"utf-8\"></";
+                value += "script>";
+                //value += "<span class=\"item first\"></span>";
+	       // value += "<span class=\"item second\"></span>"; 
+	        //value += "<span class=\"item third\"></span>";
+              //  value += "</div></div>";
+                value += "</figure></p>";
+            
+          }else{
+              alert("Error - Incorrect code");
+              return false;
+          } 
+		
+       }
+
+
+	if ( editor.mode == 'wysiwyg' )
+	{
+	     editor.insertHtml( value );
+	}else{
+	     alert( 'You must be in WYSIWYG mode!' );
+	}
+	
+	
+  }
+  
+  
+  function validaURL(url) {
+	regex = /https:\/\/twitter\.com\/(\w+)\/status(es)*\/(\d+)/g;
+	return regex.test(url);
+  }
+  
+  $(document).ready(function(){ 
+      $('.chzn-select').chosen();  
+  });
+  
+  function getDivId(prefix){
+		  
+	ramdomId = Math.floor((Math.random() * 100) + 1);
+	 content = CKEDITOR.dialog.getCurrent().getParentEditor().getData();
+	   DivId = prefix+ramdomId;
+	       
+	if(content.indexOf(DivId)>-1)
+	{
+	    getDivId(prefix);
+        }else{
+	    return DivId;
+	}
+	       
+  }
+
+   
+</script>
+</head>
+<body id="ckeditor-popin-body">
+
+	<br>
+	<p><%=message.key("GUI_CKEDITOR_TWITTER_PASTE_STRING")%></p>
+
+	<textarea rows="4" id="codeTweet" name="codeTweet" style="resize:none;width:95%;"></textarea>
+
+	<br>
+	
+	<form class="form-horizontal">
+           <fieldset>
+		<div class="span6" style="margin-left:-12px;" >
+		     <div class="control-group">
+			<label class="control-label" for="searchImagesText"><%=message.key("GUI_ALIGN")%>:</label>
+			<div class="controls">		                        	
+		              <select class="chzn-select" id="alignFrmTw" name="alignFrmTw">
+					<option value="center">Center</option>
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+		              </select>
+		         </div>
+		     </div>
+		</div>
+           </fieldset>
+	</form>
+	
+<cms:include page="/system/modules/com.tfsla.diario.admin/elements/Admin_includescripts.jsp" />	
+	
+</body>
+</html>
